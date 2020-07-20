@@ -1,0 +1,11 @@
+Package: GCluster
+Version: 0.1
+Date: 2017-03-18
+Author: Ying Hu <yhu@mail.nih.gov> Chunhua Yan <yanch@mail.nih.gov>
+Maintainer: Ying Hu <yhu@mail.nih.gov>
+License: GPL-2
+Title: Graph Based Cluster 
+Description: Toots are for Graph Based Cluster.
+Depends: R (>= 2.10), igraph, EBImage, MASS, mgcv, randomForest, xgboost, CORElearn, party, Rtsne, plotrix
+NeedsCompilation: no
+Packaged: 2017-03-18 13:00:09
