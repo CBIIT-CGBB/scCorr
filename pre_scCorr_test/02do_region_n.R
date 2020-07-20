@@ -23,6 +23,7 @@ for (i in 1:nrow(sigd)){
   cluf  <- paste0("../follow_up_20200206/tsne/do_tsne_", i.s, "_", t.s, ".txt");
   clu   <- read.table(cluf, header=T);
   rg    <- do_region(clu, as.numeric(sigd[i,3]), l=50);
+  ## region2v should be renamed as l2v. The input is a list and the output is a vector.
   v1    <- region2v(rg, dat, ann, sigd[i,2]);
   v2    <- region2v(rg, dat, ann, sigd[i,11]);
   out   <- summary(glm(v1$v~ v2$v));
