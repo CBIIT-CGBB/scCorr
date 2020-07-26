@@ -19,10 +19,6 @@ cor_tj <- function(dat_tsne,dat,genes){
   return(out.s)
 }
 
-
-
-
-
 do_tj <- function(node, l, dat, gene){
   out.v <- NULL;
   out.n <- NULL;
