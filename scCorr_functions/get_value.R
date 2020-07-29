@@ -1,18 +1,8 @@
 get_value <- function(dat,w_list){
   num_window <- length(w_list)
   res = matrix(, nrow = dim(dat)[1], ncol = num_window)
-  for(i in 1:nrow(dat)){
-    values <- rep(0,num_window)
-    for( j in 1:num_window){
-      values[j] <- mean(as.numeric(dat[i,w_list[[j]]]))
-    }
-    res[i,] <- values
+  for(i in 1:num_window){
+      res[,i] <-rowMeans(dat[,w_list[[i]],drop=FALSE])
   }
-  
   return(res)
 }
-
-
-
-
-
