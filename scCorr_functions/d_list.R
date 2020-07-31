@@ -3,9 +3,6 @@ d_list <- function(coordinates,l){
   po    <- seq(1, length(coordinates), length.out = num_window+1);
   po    <- round(po);
   o.i   <- order(coordinates)
-  target_indices <- vector(mode = "list", length = num_window)
-  for (i in 2:length(po)){
-    target_indices[i-1] <- list(which(o.i < po[i] & o.i >= po[i-1]))
-  }
+  target_indices <-mapply(function(x1,x2) list(which(x1 <= o.i & o.i< x2)),po[-length(po)],po[-1])
   return(target_indices)
 }
