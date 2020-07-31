@@ -12,6 +12,7 @@ load(infd)
 library(Rtsne)
 dat <- Rtsne(t(cdat), dims = 2, perplexity= 30, verbose=TRUE, PCA = TRUE, max_iter = 1000)
 dat <- tsne$Y
+row.names(dat) <- colnames(cdat)
 
 # Get the sliced window index list, 
 # Input: one dimensional vector and required number of windows.
