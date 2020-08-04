@@ -29,9 +29,9 @@ do_filter <- function(dat, cutoff=0.95, cutoff.v=NULL){
       out  <- min(as.vector(d.s));
       out.s <- rbind(out.s, c(c1, c2, out));
     }
+    setTxtProgressBar(pb, i);
   }
   out.s <- rbind(out.s, out.s[,c(2,1,3)]);
-  setTxtProgressBar(pb, i);
   close(pb);
   colnames(out.s) <- c("cluster1", "cluster2", "distance");
   ## convert three columns to matrix
