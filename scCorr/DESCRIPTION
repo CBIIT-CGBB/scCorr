@@ -1,11 +1,11 @@
 Package: scCorr
 Version: 0.1
 Date: 2020-07-22
-Author: Ying Hu <yhu@mail.nih.gov> Chunhua Yan <yanch@mail.nih.gov>
-Maintainer: Ying Hu <yhu@mail.nih.gov>
+Author: Heng Xu <xuheng@sas.upenn.edu> Xinyu Zhang <xinyu.zhang@yale.edu> Ying Hu <yhu@mail.nih.gov> 
+Maintainer: Heng Xu <xuheng@sas.upenn.edu>
 License: GPL-2
 Title: Correlation Computation
-Description: Toots are for Graph Based Cluster.
+Description: merge single cells for the correlation analysis
 Depends: R (>= 2.10), igraph, EBImage, MASS, mgcv, randomForest, xgboost, CORElearn, party, Rtsne, plotrix
 NeedsCompilation: no
 Packaged
