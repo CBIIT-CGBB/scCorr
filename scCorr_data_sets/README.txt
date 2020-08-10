@@ -10,6 +10,9 @@ dat_nor_Seurat_B4000.RData
 dat_nor_Seurat_B7000.RData
   7000 single cells
 
+## gene annotation file
+   ann.RData
+
 ## umap output 
   06do_umap2.RData
 
