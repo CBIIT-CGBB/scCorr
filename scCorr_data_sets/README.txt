@@ -17,7 +17,7 @@ dat_nor_Seurat_B7000.RData
   hsa04662_f.txt
 
 ## trajectory output
-tj2/
+  tj2/
 
 ## cluster analysis
   tsne2_clu/
