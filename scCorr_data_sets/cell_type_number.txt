@@ -1,9 +1,0 @@
-ct	number
-NKCells	1970
-CD4Tcells	5520
-CD14Monocytes	1595
-Bcell	2109
-IL7CD8Tcells	1348
-Dendriticcell	43
-FCGR3AMonocytes	616
-CD8Tcells	2772
