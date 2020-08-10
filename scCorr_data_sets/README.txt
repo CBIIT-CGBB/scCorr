@@ -13,9 +13,6 @@ dat_nor_Seurat_B7000.RData
 ## gene annotation file
    ann.RData
 
-## umap output 
-  06do_umap2.RData
-
 ## pathway data
   hsa04662_f.txt
 
