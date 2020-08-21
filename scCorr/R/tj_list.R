@@ -1,4 +1,4 @@
-cor_tj <- function(dat_dr,dat,genes){
+tj_list <- function(dat_dr,dat,genes){
   out.s <- NULL
   c1.i <- which.min(dat_dr[,1])
   c2.i <- which.max(dat_dr[,1])
