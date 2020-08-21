@@ -1,4 +1,4 @@
-d_list <- function(coordinates,l){
+d_list <- function(coordinates = coordinates,l = 30){
   cell_name <- names(coordinates)
   num_window <- l
   po    <- seq(1, length(coordinates), length.out = num_window+1);

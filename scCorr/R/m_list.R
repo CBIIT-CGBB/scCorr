@@ -1,4 +1,4 @@
-m_list<- function(coordinates,l){
+m_list<- function(coordinates = coordinates,l = 30){
   cell_name <- names(coordinates)
   num_window <- l
   v_min <- min(coordinates)

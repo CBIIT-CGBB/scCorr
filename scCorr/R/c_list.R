@@ -1,4 +1,4 @@
-c_list <- function(dat_dr,l){
+c_list <- function(dat_dr = dat_dr,l = 30){
   cell_name <- names(coordinates)
   out.s <- NULL
   num_clu = l
