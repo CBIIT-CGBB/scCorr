@@ -1,5 +1,5 @@
 c_list <- function(dat_dr = dat_dr,l = 30){
-  cell_name <- names(coordinates)
+  cell_name <- rownames(dat_dr)
   out.s <- NULL
   num_clu = l
   g_clut <- GCluster::GCluster(dat_dr, k = num_clu,method =  'fast_greedy')
