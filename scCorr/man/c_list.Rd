@@ -10,7 +10,7 @@ c_list(dat, l, method)
 \item{method}{Cluster method. Default: fast_greedy}
 }
 \value{
-A list of indices and name of cells.
+A list of indices of data and a list of names of data after clustering.
 }
 \description{
 This function uses the Network Modularity Optimazation Cluster Method to cluster the cells. It returns 
