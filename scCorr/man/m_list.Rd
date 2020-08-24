@@ -5,7 +5,7 @@
 m_list(coordinates, l)
 }
 \arguments{
-\item{coordinates}{Array of coordinates of the data}
+\item{coordinates}{An array of chosen coordinate of the data}
 \item{l}{Number of windows}
 }
 \value{
