@@ -1,4 +1,4 @@
-tj_list <- function(dat_dr = dat_dr, ctf = 100){
+tj_list <- function(dat = dat_dr, ctf = 100){
   out.s <- NULL
   c1.i <- which.min(dat_dr[,1])
   c2.i <- which.max(dat_dr[,1])
