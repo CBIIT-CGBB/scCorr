@@ -2,13 +2,15 @@
 \alias{c_list}
 \title{cluster_method_list}
 \usage{
-c_list(dat, 30)
+c_list(dat, l,method)
 }
 \arguments{
-\item{infile}{Path to the input file}
+\item{dat}{Data file for Clustering}
+\item{l}{Number of clusters}
+\item{method}{Cluster method. Default: \\'fast_greedy\\'}
 }
 \value{
-A matrix of the infile
+A list of indices and name of cells.
 }
 \description{
 This function uses the Network Modularity Optimazation Cluster Method to cluster the cells. It returns 
