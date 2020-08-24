@@ -9,7 +9,7 @@ tj_list(dat, ctf)
 \item{ctf}{cutoff for the number of cells as a node}
 }
 \value{
-A list of indices and name of cells.
+A list of indices of data and a list of names of data.
 }
 \description{
 This function uses the trajectory-based method to cluster cells. It returns 
