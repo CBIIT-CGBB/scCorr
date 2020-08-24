@@ -2,7 +2,7 @@
 \alias{m_list}
 \title{window_method_list}
 \usage{
-c_list(coordinates, l)
+m_list(coordinates, l)
 }
 \arguments{
 \item{coordinates}{Array of coordinates of the data}
