@@ -1,6 +1,6 @@
 \name{d_list}
 \alias{d_list}
-\title{density_method_list}
+\title{Merging by Density Method }
 \usage{
 c_list(coordinates, l)
 }
