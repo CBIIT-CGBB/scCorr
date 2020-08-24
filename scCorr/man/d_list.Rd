@@ -12,6 +12,6 @@ c_list(coordinates, l)
 A list of indices and name of cells.
 }
 \description{
-This function uses the density-based method cluster the cells. It returns 
+This function uses the density-based method to merge the cells. It returns 
 the list of indices and name of cells after clustering. 
 }
