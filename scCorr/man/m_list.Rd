@@ -9,7 +9,7 @@ m_list(coordinates, l)
 \item{l}{Number of windows}
 }
 \value{
-A list of indices and name of cells.
+A list of indices of data and a list of names of data after merging.
 }
 \description{
 This function uses the window-based method to merge the cells. It returns 
