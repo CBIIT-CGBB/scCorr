@@ -1,6 +1,6 @@
 \name{c_list}
 \alias{c_list}
-\title{cluster_method_list}
+\title{Cluster Method To List}
 \usage{
 c_list(dat, l, method)
 }
