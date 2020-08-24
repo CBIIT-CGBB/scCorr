@@ -1,4 +1,5 @@
 \name{c_list}
+\alias{c_list}
 \title{cluster_method_list}
 \usage{
 c_list(dat, 30)
