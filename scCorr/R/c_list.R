@@ -8,5 +8,3 @@ c_list <- function(dat_dr = dat_dr,l = 30){
   cell <- sapply(c(1:num_clu),function(x) list(cell_name[target_indices[[x]]]))
   return(list(target_indices,cell))
 }
-
-g_clut$names
