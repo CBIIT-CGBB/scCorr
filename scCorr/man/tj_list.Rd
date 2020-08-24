@@ -12,6 +12,6 @@ tj_list(dat, ctf)
 A list of indices and name of cells.
 }
 \description{
-This function uses the trajectory-based method cluster the cells. It returns 
+This function uses the trajectory-based method to cluster cells. It returns 
 the list of indices and name of cells after clustering. 
 }
