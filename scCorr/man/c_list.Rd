@@ -7,7 +7,7 @@ c_list(dat, l,method)
 \arguments{
 \item{dat}{Data file for Clustering}
 \item{l}{Number of clusters}
-\item{method}{Cluster method. Default: \\'fast_greedy\\'}
+\item{method}{Cluster method. Default: fast_greedy}
 }
 \value{
 A list of indices and name of cells.
