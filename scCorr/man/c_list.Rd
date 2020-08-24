@@ -2,7 +2,7 @@
 \alias{c_list}
 \title{cluster_method_list}
 \usage{
-c_list(dat, l,method)
+c_list(dat, l, method)
 }
 \arguments{
 \item{dat}{Data file for Clustering}
