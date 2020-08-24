@@ -1,6 +1,6 @@
 \name{tj_list}
 \alias{tj_list}
-\title{trajectory_method_list}
+\title{Merging by Trajectory Method}
 \usage{
 tj_list(dat, ctf)
 }
