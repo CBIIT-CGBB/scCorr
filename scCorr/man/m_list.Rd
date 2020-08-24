@@ -1,6 +1,6 @@
 \name{m_list}
 \alias{m_list}
-\title{window_method_list}
+\title{Merging by Window Method}
 \usage{
 m_list(coordinates, l)
 }
