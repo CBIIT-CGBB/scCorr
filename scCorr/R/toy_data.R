@@ -1,3 +1,9 @@
+#' @docType data
+
+#' @usage data(toy_dat)
+
+
+
 #' @examples
 #' library('Rtsne')
 #' data(toy_dat)
