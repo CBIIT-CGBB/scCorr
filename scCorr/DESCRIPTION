@@ -6,7 +6,7 @@ Maintainer: Heng Xu <xuheng@sas.upenn.edu>
 License: GPL-2
 Title: Correlation Computation
 Description: merge single cells for the correlation analysis
-Depends: R (>= 2.10), igraph, EBImage, MASS, mgcv, randomForest, xgboost, CORElearn, party, Rtsne, plotrix
+Depends: R (>= 2.10), igraph
 NeedsCompilation: no
 LazyData: true
 
