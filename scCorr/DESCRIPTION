@@ -8,5 +8,5 @@ Title: Correlation Computation
 Description: merge single cells for the correlation analysis
 Depends: R (>= 2.10), igraph
 NeedsCompilation: no
-LazyData: true
+
 
