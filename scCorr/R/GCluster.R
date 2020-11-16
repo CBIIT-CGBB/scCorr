@@ -93,7 +93,7 @@ GCluster <- function(dat=dat, wt=4, k=NULL, method="louvain"){
   if (in.g){
     g       <- dat;
   } else {
-    g       <- graph_from_adjacency_matrix(as.matrix(dat.d), weighted =T, mode = "upper");
+    g       <- igraph::graph_from_adjacency_matrix(as.matrix(dat.d), weighted =T, mode = "upper");
   }
   
   g0      <- g;
