@@ -9,7 +9,7 @@ c_list <- function(dat = dat_dr,l = 30,method = 'fast_greedy',auto_scaling = TRU
   c2    <- scale.v(dat_dr[,2], -v, v)
   dat  <- data.frame(v1=c1, v2=c2)
    }
-  g_clut <- GCluster(dat2, k = num_clu,method =  method)
+  g_clut <- GCluster(dat, k = num_clu,method =  method)
   g_label <- g_clut$membership
   target_indices <-sapply(c(1:num_clu),function(x) list(which(g_label == x)))
   cell <- sapply(c(1:num_clu),function(x) list(cell_name[target_indices[[x]]]))
