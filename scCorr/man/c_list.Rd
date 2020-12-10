@@ -2,7 +2,7 @@
 \alias{c_list}
 \title{Merging by Cluster Method}
 \usage{
-c_list(dat, l, method)
+c_list(dat, l, method,auto_scaling)
 }
 \arguments{
 \item{dat}{Data file for Clustering}
