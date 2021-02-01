@@ -38,7 +38,6 @@ scCorr: R package for single cell association or correlation analysis
     library(Rtsne)
     dat_dr <- Rtsne(t(toy_dat),pca = TRUE,verbose = FALSE)$Y
     rownames(dat_dr) <- colnames(toy_dat)
-    #head(dat_dr)
 
 #### 2.2 Apply scCorr cluter methods to reconstruct our data
 
@@ -56,18 +55,21 @@ scCorr: R package for single cell association or correlation analysis
     ## re-make graph clustering ...
     ## re-make graph clustering ...
     ## re-make graph clustering ...
+    ## re-make graph clustering ...
+    ## re-make graph clustering ...
+    ## re-make graph clustering ...
 
     merged.list <- c.list[[1]]
+
     new_data <- get_value(dat = toy_dat, d_list = merged.list)
-    #colnames(new_data) <- colnames(toy_dat)
     head(new_data[,1:4],)
 
-    ##                      [,1] [,2]     [,3] [,4]
-    ## ENSG00000000003 0.5662308    0 0.000000    0
-    ## ENSG00000000005 0.0000000    0 0.000000    0
-    ## ENSG00000000419 0.0000000    0 1.549518    0
-    ## ENSG00000000457 0.0000000    0 0.000000    0
-    ## ENSG00000000460 0.0000000    0 0.000000    0
-    ## ENSG00000000938 0.0000000    0 0.000000    0
+    ##                      [,1]     [,2]      [,3] [,4]
+    ## ENSG00000000003 0.5662308 0.164252 0.0000000    0
+    ## ENSG00000000005 0.0000000 0.000000 0.0000000    0
+    ## ENSG00000000419 0.0000000 0.000000 0.0560539    0
+    ## ENSG00000000457 0.0000000 0.000000 0.0000000    0
+    ## ENSG00000000460 0.0000000 0.000000 0.0000000    0
+    ## ENSG00000000938 0.0000000 0.000000 0.0000000    0
 
 #### 2.3 Compute the correlation
