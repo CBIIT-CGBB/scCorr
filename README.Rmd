@@ -1,0 +1,53 @@
+---
+title: "README"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# scCorr: R package for single cell association or correlation analysis
+
+### 1.Installaling 
+
+```{r,echo=T, message=FALSE,results='hide'}
+library('devtools')
+install_github("CBIIT-CGBB/scCorr",auth_token = 'cbd6dad89a1f8c12c8cb54bfca9c3027796835ea')
+```
+
+
+### 2. Basic Usage
+
+```{r message=FALSE,results='hide'}
+library('scCorr')
+```
+#### Load the toy data
+```{r}
+data(toy_dat)
+head(toy_dat[,1:4],)
+
+```
+#### Using scCorr to compute the correlation of "ENSG00000000003" and "ENSG00000000005"
+#### 2.1 Apply dimension reduction methods (usually t-SNE or U-map)
+```{r}
+#install.packages(Rtsne)
+library(Rtsne)
+dat_dr <- Rtsne(t(toy_dat),pca = TRUE,verbose = FALSE)$Y
+rownames(dat_dr) <- colnames(toy_dat)
+#head(dat_dr)
+```
+#### 2.2 Apply scCorr cluter methods to reconstruct our data
+```{r}
+# Using cluster method with default cluster numbers
+c.list <- c_list(dat_dr)
+merged.list <- c.list[[1]]
+new_data <- get_value(dat = toy_dat, d_list = merged.list)
+#colnames(new_data) <- colnames(toy_dat)
+head(new_data[,1:4],)
+```
+
+#### 2.3 Compute the correlation
+```{r}
+
+
+```
