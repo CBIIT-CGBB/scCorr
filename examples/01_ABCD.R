@@ -1,4 +1,4 @@
-load("../data_sets/matrix_nor_Seurat.RData")
+load("...RData")
 ann <- read.table("../data_sets/gene4matrix_Seurat.txt", header=T, row.names=1);
 sum(row.names(dat)==row.names(ann))==nrow(dat);
 
