@@ -1,5 +1,5 @@
 #' @docType data
 
-#' @usage data(00zero_dist.RData)
+#' @usage data(zero_dist.RData)
 
-"00zero_dist.RData"
+"zero_dist.RData"
