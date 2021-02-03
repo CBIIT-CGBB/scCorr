@@ -4,17 +4,11 @@ data(b_dat)
 data(NK_dat)
 data(other_dat)
 dat <- dplyr::bind_cols(cd4_dat,cd8_dat,b_dat,NK_dat,other_dat)
-ann <- data(gene4matrix_Seurat)
-ann <- load("data/gene4matrix_Seurat.Rdata")
-gene <- data(hsa04662_f)
+data(gene4matrix_Seurat)
+data(hsa04662_f)
 g.u  <- unique(c(gene[,1], gene[,2]));
 dat.i <- which(ann[,1] %in% g.u);
 dat.s <- dat[dat.i,];
-
-pdf("t1.pdf", 40, 30);
-layout(matrix(c(1,2,3,4), nrow = 4, ncol = 4, byrow = TRUE))
-par("mar"=c(7, 7, 7, 7))
-cols <- rainbow(10, alpha=0.8);
 
 
 z1   <- apply(dat, 1, function(x) sum(x==0));
@@ -29,6 +23,14 @@ z3   <- z3/nrow(dat) * 100;
 
 z4   <- apply(dat.s, 2, function(x) sum(x==0));
 z4   <- z4/nrow(dat.s) * 100;
+
+
+
+pdf("t1.pdf", 40, 30);
+layout(matrix(c(1,2,3,4), nrow = 2, ncol = 2, byrow = TRUE));
+par("mar"=c(7, 7, 7, 7));
+cols <- rainbow(10, alpha=0.8);
+
 
 hist(z1, col=cols[7], border=cols[7], breaks=100, xlim=c(70, 100), 
      font.main = 1,main="21430 full genes; 15973 single cells", xlab="",
