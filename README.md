@@ -16,10 +16,12 @@ One of the challenges in single cell RNA-sequence analysis is abundance of zero 
 [R codes](examples/01_ABCD.R)
 
 <p align="center">
-<img src="Image/1_EFG.png" width="600" height="200">
+<img src="Image/1_EFG.png" width="400" height="200">
 </p>
 
 [R codes](examples/01_EFG.R)
+
+### 4. Graphical based k-partitioning approach 
 
 <p align="center">
 <img src="Image/1_HIJK.png" width="400" height="400">
