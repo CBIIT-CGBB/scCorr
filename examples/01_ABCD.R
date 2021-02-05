@@ -1,11 +1,16 @@
-data(cd4_dat)
-data(cd8_dat)
-data(b_dat)
-data(NK_dat)
-data(other_dat)
+
+load('./data/cd4_dat.Rdata')
+load('./data/cd8_dat.Rdata')
+load('./data/NK_dat.Rdata')
+load('./data/other_dat.Rdata')
+load('./data/b_dat.Rdata')
+
 dat <- dplyr::bind_cols(cd4_dat,cd8_dat,b_dat,NK_dat,other_dat)
-data(gene4matrix_Seurat)
-data(hsa04662_f)
+ann <- read.table("./data/01/gene4matrix_Seurat.txt", header=T, row.names=1);
+
+
+
+gene <- read.table("./data/01/hsa04662_f.txt", header=T);
 g.u  <- unique(c(gene[,1], gene[,2]));
 dat.i <- which(ann[,1] %in% g.u);
 dat.s <- dat[dat.i,];
@@ -26,7 +31,7 @@ z4   <- z4/nrow(dat.s) * 100;
 
 
 
-pdf("t1.pdf", 40, 30);
+pdf("1_ABCD.pdf", 40, 30);
 layout(matrix(c(1,2,3,4), nrow = 2, ncol = 2, byrow = TRUE));
 par("mar"=c(7, 7, 7, 7));
 cols <- rainbow(10, alpha=0.8);

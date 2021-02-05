@@ -6,4 +6,19 @@ scCorr: R package for single cell association or correlation analysis
     library('devtools')
     install_github("CBIIT-CGBB/scCorr",auth_token = 'cbd6dad89a1f8c12c8cb54bfca9c3027796835ea')
 
-### 2. Example
+### 2. Plots
+<img src="image/1_ABCD.png" width="400" height="400">  
+
+<img src="image/1_EFG.png" width="400" height="400">
+
+<img src="image/1_HIJK.png" width="400" height="400">
+
+<img src="image/1_l.png" width="400" height="400">
+
+<img src="image/2_AB.png" width="400" height="200">
+
+<img src="image/2_CD.png" width="400" height="200">
+
+<img src="image/2_EF.png"width="400" height="200">
+
+<img src="image/2_GH.png" width="400" height="200">

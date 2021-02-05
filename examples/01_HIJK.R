@@ -1,8 +1,9 @@
-
-pdf("t1.pdf", 40, 40);
+cty <- read.table("./data/01/01cluster_ct.txt", header=T);
+clu <- read.table("./data/01/03clust_table.txt", header=T);
+pdf("1_HIJK.pdf", 40, 40);
 layout(matrix(c(1,1,2,2,
                 1,1,2,2,
-                3,3,4,5,
+                3,3,4,4,
                 3,3,5,5), nrow = 4, ncol = 4, byrow = TRUE));
 par("mar"=c(7, 7, 7, 7));
 
@@ -19,10 +20,9 @@ shadowtext <- function(x, y=NULL, labels, col='white', bg='black',
   text(xy$x, xy$y, labels, col=col, ... )
 }
 cols <- rainbow(10, alpha=0.8);
-cty <- data(cluster_ct);
-clu <- data(clust_table);
-clu.v <- clust_table[,23];
-dat <- data(do_tsne30_2000)
+
+clu.v <- clu[,23];
+dat <- read.table("./data/01/do_tsne30_2000.txt", header=T); 
 
 
 
@@ -30,21 +30,21 @@ cty.n <- c("NK Cells", "CD4 T\nCells", "B Cell", "CD8 T\nCells",
            "CD14\nMonocytes", "Dendritic\nCell", "FCGR3A\nMonocytes")
 
 col0  <- rainbow(10, alpha=0.1);
-cty.u <- unique(cluster_ct[,15]);
+cty.u <- unique(cty[,15]);
 cols  <- rainbow(10, alpha=0.6)[c(1,2,3,6,7,8,9)];
-plot(do_tsne30_2000[,c(1,2)], xlab="", ylab="", pch=19, col=col0[7], 
+plot(dat[,c(1,2)], xlab="", ylab="", pch=19, col=col0[7], 
      xlim=c(-50, 70), cex.main=2.3,cex.lab=2, cex.axis=2);
 title(ylab="tSNE 2", line=4, cex.lab=4, family = "sans")
 title(xlab="tSNE 1", line=4, cex.lab=4, family = "sans")
 for (i in 1:length(cty.u)){
   n   <- cty.u[i];
-  c.i <- which(cluster_ct[,15]==n);
-  n.i <- which(clu.v %in% cluster_ct[c.i,1]);
-  s.n <- row.names(clust_table)[n.i];
+  c.i <- which(cty[,15]==n);
+  n.i <- which(clu.v %in% cty[c.i,1]);
+  s.n <- row.names(clu)[n.i];
   d.i <- which(row.names(dat) %in% s.n);
-  points(do_tsne30_2000[d.i, c(1,2)], col=cols[i], pch=19, cex=0.4)
-  x   <- mean(do_tsne30_2000[d.i, 1]);
-  y   <- mean(do_tsne30_2000[d.i, 2]);
+  points(dat[d.i, c(1,2)], col=cols[i], pch=19, cex=0.4)
+  x   <- mean(dat[d.i, 1]);
+  y   <- mean(dat[d.i, 2]);
   shadowtext(x, y, cty.n[i],col ='black',bg = 'white',cex = 3);
 }
 
@@ -52,24 +52,24 @@ col0 <- rainbow(10, alpha=0.6);
 clu.n <- c(100,1000);
 for (n in clu.n){
   clu.name <- paste0("clu", n);
-  clu.i    <- which(colnames(clust_table) %in% clu.name);
-  clu.v    <- clust_table[,clu.i];
+  clu.i    <- which(colnames(clu) %in% clu.name);
+  clu.v    <- clu[,clu.i];
   clu.u    <- unique(clu.v);
   clu.j    <- length(clu.u)
   set.seed(123);
   cols  <- rainbow(clu.j, alpha=0.6);
   cols  <- sample(cols);
   main  <- paste0("cluster number:", clu.j)
-  plot(do_tsne30_2000[,c(1,2)], pch=19, col=cols[clu.v], cex.main=3,font.main = 1,cex.lab=2, cex.axis=2, 
+  plot(dat[,c(1,2)], pch=19, col=cols[clu.v], cex.main=3,font.main = 1,cex.lab=2, cex.axis=2, 
        xlab="", ylab="", main=main);
   title(ylab="tSNE 2", line=4, cex.lab=3.5, family = "sans")
   title(xlab="tSNE 1", line=4, cex.lab=4.5, family = "sans")
-
 }
 
 
 num    <- 15973;
-dat    <- read.table("../02clust_table_raw.txt", header=T);
+dat    <- read.table("./data/01/02clust_table_raw.txt", header=T);
+
 clu1.n <- seq(100, 1000, length.out = 10);
 clu1.e <- num/clu1.n;
 clu1.s <- paste0("clu", clu1.n);
@@ -102,7 +102,6 @@ boxplot(dat2.l, col='#CCCC00', border = '#CC0000',
 points(1:10, clu2.e, col='#CC0000', pch=19,cex = 2);
 title(ylab="Number of Cells", line=4, cex.lab=4, family = "sans")
 title(xlab="Cluster Number", line=4, cex.lab=4, family = "sans")
-fig_label('K', pos='topleft',cex=5)
 
 boxplot(dat1.l, col='#CCCC00', border = '#CC0000',
         names = c("100","200","300","400","500","600","700","800","900","1000"),cex.lab=2);

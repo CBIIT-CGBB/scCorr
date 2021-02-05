@@ -1,5 +1,6 @@
 
-pdf("t2.pdf", 30, 20);
+pdf("1_EFG.pdf", 20, 20);
+load("./data/01/00zero_dist.RData")
 layout(matrix(c(1,2,3), nrow = 1, ncol = 3, byrow = TRUE));
 par("mar"=c(7, 7, 7, 7));
 
@@ -8,7 +9,6 @@ f.s <- c(1000, 4000, 7000, 10000, 13000, 15973);
 num <- c(15719, 18612, 19775, 20488, 21014, 21430);
 cols <- rainbow(10, alpha=0.8);
 col2 <- cols[c(1,2,7,3,9,6)];
-data(zero_dist);
 
 boxplot(out.f$out.s, col=cols[7], border=cols[7], cex.axis=2.3);
 title(font.main = 1,main="21430 full genes", xlab="", ylab = "",pch=19, cex.main=3,cex.lab=2, cex.axis= 2.5);
@@ -22,9 +22,8 @@ title(xlab="Number of Cells", line=4.5, cex.lab=4, family = "sans");
 
 for (i in 1:length(f.s)){
   n    <- f.s[i];
-  inff <- paste0("n", n);
- # print(inff)
-  data(list=inff);
+  inff <- paste0("./data/01//n", n, ".RData");
+  load(inff);
   dat <- t(out.s);
   dat <- dat/num[i];
   v   <- apply(dat, 2, mean);
