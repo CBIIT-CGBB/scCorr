@@ -13,8 +13,10 @@ scCorr: R package for single cell association or correlation analysis
 
 <img src="Image/1_HIJK.png" width="400" height="400">
 
+<p align="center">
 <img src="Image/1_l.png" width="400" height="400">
+</p>
 
 <img src="Image/2_AB.png" width="400" height="200"><img src="Image/2_CD.png" width="400" height="200">
 
-<img src="Image/2_EF.png"width="400" height="200"><img src="Image/2_GH.png" width="400" height="200">
+<img src="Image/2_EF.png" width="400" height="200"><img src="Image/2_GH.png" width="400" height="200">
