@@ -16,7 +16,7 @@ One of the challenges in single cell RNA-sequence analysis is abundance of zero 
 [R codes](examples/01_ABCD.R)
 
 <p align="left">
-<img src="Image/1_EFG.png" width="400" height="160">
+<img src="Image/1_EFG.png" width="400" height="130">
 </p>
 
 [R codes](examples/01_EFG.R)
@@ -32,7 +32,7 @@ One of the challenges in single cell RNA-sequence analysis is abundance of zero 
 ### 5. Cluster tree visualization 
 
 <p align="left">
-<img src="Image/1_L.png" width="300" height="300">
+<img src="Image/1_L.png" width="310" height="300">
 </p>
 
 [R codes](examples/01_I.R)
