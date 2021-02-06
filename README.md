@@ -35,7 +35,7 @@ One of the challenges in single cell RNA-sequence analysis is abundance of zero 
 <img src="Image/1_L.png" width="310" height="300">
 </p>
 
-[R codes](examples/01_I.R)
+[R codes](examples/01_L.R)
 
 ### 6. Correlation method comparison 
 
