@@ -1,6 +1,8 @@
+rm(list=ls());
+
 cty <- read.table("./data/01/01cluster_ct.txt", header=T);
 clu <- read.table("./data/01/03clust_table.txt", header=T);
-pdf("1_HIJK.pdf", 40, 40);
+pdf("1_HIJK.pdf", 23, 20);
 layout(matrix(c(1,1,2,2,
                 1,1,2,2,
                 3,3,4,4,

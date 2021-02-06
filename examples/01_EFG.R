@@ -1,5 +1,6 @@
+rm(list=ls());
 
-pdf("1_EFG.pdf", 20, 20);
+pdf("1_EFG.pdf", 24, 8);
 load("./data/01/00zero_dist.RData")
 layout(matrix(c(1,2,3), nrow = 1, ncol = 3, byrow = TRUE));
 par("mar"=c(7, 7, 7, 7));
@@ -34,12 +35,10 @@ for (i in 1:length(f.s)){
          xlab="", ylab="",cex.main=3, cex.axis=2.5);
     title(ylab="% of Zero Value", line=4, cex.lab=4, family = "sans")
     title(xlab="Number of Merged Cells", line=4.5, cex.lab=4, family = "sans")
-    legend("topright", legend=f.s, lwd=6, title="Cell Number", bty="n", col=col2, cex = 4.5);
+    legend("topright", legend=f.s, lwd=6, title="Cell Number", bty="n", col=col2, cex = 3.5);
   } else {
     points(v, type="l", col=col2[i], lwd=6)
   }
-  
 }
-
 
 dev.off();

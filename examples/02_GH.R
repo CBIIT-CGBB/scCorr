@@ -1,3 +1,5 @@
+rm(list=ls());
+
 pdf("2_GH.pdf", 20,10);
 layout(matrix(c(1,2), nrow = 1, ncol = 2, byrow = TRUE))
 par("mar"=c(7, 7, 7, 2))
@@ -34,8 +36,8 @@ for (n in num){
 }
 
 text1 <- paste0("scCorr Cluster AUC:", round(mean(out2), 2));
-text(0.7, 0.3, text1,cex=3.5);
-text(0.7, 0.18, text2,cex=3.5);
+text(0.6, 0.3, text1,cex=3);
+text(0.6, 0.18, text2,cex=3);
 
 
 load("./data/02/06sc_roc.RData");
@@ -65,8 +67,8 @@ for (n in num){
 }
 
 text1 <- paste0("scCorr Cluster AUC:", round(mean(out2), 2));
-text(0.7, 0.3, text1,cex=3.5);
-text(0.7, 0.18, text2,cex=3.5);
+text(0.6, 0.3, text1,cex=3);
+text(0.6, 0.18, text2,cex=3);
 
 
 dev.off()

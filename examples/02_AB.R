@@ -1,3 +1,4 @@
+rm(list=ls());
 
 pdf("2_AB.pdf", 20,10);
 layout(matrix(c(1,2), nrow = 1, ncol = 2, byrow = TRUE))

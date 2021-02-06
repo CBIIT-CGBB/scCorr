@@ -1,3 +1,5 @@
+rm(list=ls());
+
 pdf("2_CD.pdf", 20,10);
 layout(matrix(c(1,2), nrow = 1, ncol = 2, byrow = TRUE))
 par("mar"=c(7, 7, 7, 2))
