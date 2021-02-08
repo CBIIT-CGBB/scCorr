@@ -23,7 +23,7 @@ title(xlab="Number of Cells", line=4.5, cex.lab=4, family = "sans");
 
 for (i in 1:length(f.s)){
   n    <- f.s[i];
-  inff <- paste0("./data/01//n", n, ".RData");
+  inff <- paste0("./data/01/n", n, ".RData");
   load(inff);
   dat <- t(out.s);
   dat <- dat/num[i];

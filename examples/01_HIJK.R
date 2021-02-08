@@ -9,32 +9,21 @@ layout(matrix(c(1,1,2,2,
                 3,3,5,5), nrow = 4, ncol = 4, byrow = TRUE));
 par("mar"=c(7, 7, 7, 7));
 
-shadowtext <- function(x, y=NULL, labels, col='white', bg='black', 
-                       theta= seq(0, 2*pi, length.out=50), r=0.1, ... ) {
-  xy <- xy.coords(x,y)
-  xo <- r*strwidth('A')
-  yo <- r*strheight('A')
-  # draw background text with small shift in x and y in background colour
-  for (i in theta) {
-    text( xy$x + cos(i)*xo, xy$y + sin(i)*yo, labels, col=bg, ... )
-  }
-  # draw actual text in exact xy position in foreground colour
-  text(xy$x, xy$y, labels, col=col, ... )
-}
+source('shadowtext.R')
 cols <- rainbow(10, alpha=0.8);
 
 clu.v <- clu[,23];
-dat <- read.table("./data/01/do_tsne30_2000.txt", header=T); 
+dat <- read.table("./data/01/do_tsne30_2000.txt", header=T);
 
 
 
-cty.n <- c("NK Cells", "CD4 T\nCells", "B Cell", "CD8 T\nCells",      
+cty.n <- c("NK Cells", "CD4 T\nCells", "B Cell", "CD8 T\nCells",
            "CD14\nMonocytes", "Dendritic\nCell", "FCGR3A\nMonocytes")
 
 col0  <- rainbow(10, alpha=0.1);
 cty.u <- unique(cty[,15]);
 cols  <- rainbow(10, alpha=0.6)[c(1,2,3,6,7,8,9)];
-plot(dat[,c(1,2)], xlab="", ylab="", pch=19, col=col0[7], 
+plot(dat[,c(1,2)], xlab="", ylab="", pch=19, col=col0[7],
      xlim=c(-50, 70), cex.main=2.3,cex.lab=2, cex.axis=2);
 title(ylab="tSNE 2", line=4, cex.lab=4, family = "sans")
 title(xlab="tSNE 1", line=4, cex.lab=4, family = "sans")
@@ -62,7 +51,7 @@ for (n in clu.n){
   cols  <- rainbow(clu.j, alpha=0.6);
   cols  <- sample(cols);
   main  <- paste0("cluster number:", clu.j)
-  plot(dat[,c(1,2)], pch=19, col=cols[clu.v], cex.main=3,font.main = 1,cex.lab=2, cex.axis=2, 
+  plot(dat[,c(1,2)], pch=19, col=cols[clu.v], cex.main=3,font.main = 1,cex.lab=2, cex.axis=2,
        xlab="", ylab="", main=main);
   title(ylab="tSNE 2", line=4, cex.lab=3.5, family = "sans")
   title(xlab="tSNE 1", line=4, cex.lab=4.5, family = "sans")
