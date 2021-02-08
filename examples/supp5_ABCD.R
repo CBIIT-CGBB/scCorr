@@ -15,7 +15,7 @@ sum(row.names(dat)==row.names(ann))==nrow(ann);
 
 pdf("supp5_ABCD.pdf", 10,10);
 layout(matrix(c(1,2,3,4), nrow = 2, ncol = 2, byrow = TRUE))
-par("mar"=c(7, 7, 7, 2))
+par("mar"=c(3, 3, 3, 3))
 
 
 cols  <- rainbow(10, alpha=0.6);
@@ -64,8 +64,9 @@ for (i in 1:100){
   } else {
     val.l[[2]] <- v2[v1.j];
   }
-  vioplot4(val.l, adjust=rep(0.8, 2), at=c(1,2), col=cols[c(1,7)], label=c("Low", "High"), main="", xlab=g1, ylab=g2);
-  
+  out <- t.test(val.l[[1]], val.l[[2]]);
+  main1 <- paste0("tvalue:", round(out$statistic, 3), " P value:", sprintf("%0.2E", out$p.value));
+  vioplot4(val.l, adjust=rep(0.8, 2), at=c(1,2), col=cols[c(1,7)], label=c("Low", "High"), main=main1, xlab=g1, ylab=g2);
   
   # Find clustered correlation
   v1.c <- NULL;
@@ -86,17 +87,22 @@ for (i in 1:100){
   abline(lm(v2.c ~ v1.c), col=cols[1], lwd=2);
   
   
-  v1.m <- mean(v1.c);
-  v1.j <- which(v1.c >= v1.m);
-  val.l <- NULL;
-  val.l[[1]] <- v2.c[-v1.j];
-  if (length(v1.j) < 2){
-    val.l[[2]] <- rep(v2[v1.j], 2);
+  v1c.m <- mean(v1.c);
+  v1c.j <- which(v1.c >= v1c.m);
+  valc.l <- NULL;
+  valc.l[[1]] <- v2.c[-v1c.j];
+  if (length(v1c.j) < 2){
+    valc.l[[2]] <- rep(v2.c[v1c.j], 2);
   } else {
-    val.l[[2]] <- v2[v1.j];
+    valc.l[[2]] <- v2.c[v1c.j];
   }
-  vioplot4(val.l, adjust=rep(0.8, 2), at=c(1,2), col=cols[c(1,7)], label=c("Low", "High"), main="", xlab=g1, ylab=g2);
-}
+  if (sum(valc.l[[1]])==0){
+    valc.l[[1]] <- runif(length(valc.l[[1]]))/1000;
+  }
+  out <- t.test(valc.l[[1]], valc.l[[2]]);
+  main2 <- paste0("tvalue:", round(out$statistic, 3), " P value:", sprintf("%0.2E", out$p.value));
+  vioplot4(valc.l, adjust=rep(0.8, 2), at=c(1,2), col=cols[c(1,7)], label=c("Low", "High"), main=main2, xlab=g1, ylab=g2);
+  }
 }
 dev.off();
 
