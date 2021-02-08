@@ -40,9 +40,10 @@ d2.s  <- paste0(dat2[,1], "_", dat2[,2]);
 
 
 for (i in 1:100){
+  # Find non-clustered correlation
   g1   <- dat1[i,1];
   g2   <- dat1[i,2];
-  if ((g1 == 'MAPKAPK2' && g2 == 'ATF4') ||(g1 == 'FLT3LG' && g2 == 'IGF1R')){
+  if ((g1 == 'DUSP2' && g2 == 'MAPK1')){
   g.s  <- paste0(g1, "_", g2);
   g2.i <- which(d2.s == g.s);  
   v1.i <- which(ann[,2]==g1)[1];
@@ -58,6 +59,37 @@ for (i in 1:100){
   v1.j <- which(v1 >= v1.m);
   val.l <- NULL;
   val.l[[1]] <- v2[-v1.j];
+  if (length(v1.j) < 2){
+    val.l[[2]] <- rep(v2[v1.j], 2);
+  } else {
+    val.l[[2]] <- v2[v1.j];
+  }
+  vioplot4(val.l, adjust=rep(0.8, 2), at=c(1,2), col=cols[c(1,7)], label=c("Low", "High"), main="", xlab=g1, ylab=g2);
+  
+  
+  # Find clustered correlation
+  v1.c <- NULL;
+  v2.c <- NULL;
+  for (j in 1:length(clu.u)){
+    c.i  <- which(clu.s[,2]==clu.u[j]);
+    c.n  <- row.names(clu.s)[c.i];
+    d.i  <- which(colnames(dat.s) %in% c.n);
+    tmp1 <- as.numeric(dat.s[v1.i, d.i]);
+    tmp2 <- as.numeric(dat.s[v2.i, d.i]);
+    v1.c <- c(v1.c, mean(tmp1));
+    v2.c <- c(v2.c, mean(tmp2));
+  }
+  main <- paste0(g1, " ", g2, "in Cluster 100")
+  main <- paste0("Cluster: P value:", sprintf("%0.2E", dat1[i,8]), 
+                 "\np.R:", round(dat1[i, 3], 3), " s.R:", round(dat1[i, 4], 3))
+  plot(v1.c, v2.c, xlab=g1, ylab=g2, pch=19, col=cols[7], main=main);
+  abline(lm(v2.c ~ v1.c), col=cols[1], lwd=2);
+  
+  
+  v1.m <- mean(v1.c);
+  v1.j <- which(v1.c >= v1.m);
+  val.l <- NULL;
+  val.l[[1]] <- v2.c[-v1.j];
   if (length(v1.j) < 2){
     val.l[[2]] <- rep(v2[v1.j], 2);
   } else {
