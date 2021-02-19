@@ -10,25 +10,6 @@ colnames(dat0)[d.i]
 dat  <- dat0[, d.i];
 out  <- m2table(dat);
 
-scale.v <- function(v, a, b) {
-  v <- v-min(v);
-  v <- v/max(v);
-  v <- v*(b-a);
-  v+a
-}
-
-count.rows2 <- function(x){
-  out   <- as.data.frame(table(as.data.frame(x)));
-  out.i <- which(out[,3]==0);
-  if (length(out.i) > 0){
-    out   <- out[-out.i,];
-  }
-  out.j <- order(out[,1]);
-  out   <- out[out.j,];
-  out   <- out[,c(3,1,2)];
-  out;
-}
-
 k        <- apply(dat, 2, function(x) length(unique(x)));
 k        <- as.numeric(k);
 l.adj    <- 0.9;

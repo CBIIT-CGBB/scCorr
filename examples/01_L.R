@@ -3,57 +3,6 @@ rm(list=ls());
 pdf("1_L.pdf", 20, 20);
 par(mar=c(4,4,4,4));
 
-## radian and degree
-n2p <- function(cx, cy, r, n, start.w=1, end.w=360){
-  dg   <- seq(start.w, end.w, length.out=n) + 270;
-  w    <- dg/180*pi;
-  x    <- cx + r*cos(w);
-  y    <- cy - r*sin(w);
-  y    <- y;
-  return(list(x=x, y=y));
-}
-
-y2y <- function(y){
-  xylim   <- par("usr");
-  plotdim <- par("pin");
-  ymult   <- (xylim[4] - xylim[3])/(xylim[2] - xylim[1]) * plotdim[1]/plotdim[2];
-  y       <- y * ymult;
-}
-
-distance <- function(from, to){
-  D <- sqrt((abs(from[,1]-to[,1])^2) + (abs(from[,2]-to[,2])^2))
-  return(D)
-}
-
-angle0 <- function(from, to){
-  # dot.prods <- rowSums(from * to)
-  dot.prods <- from$x*to$x + from$y*to$y
-  norms.x <- distance(from = `[<-`(from,,,0), to = from)
-  norms.y <- distance(from = `[<-`(to,,,0), to = to)
-  thetas <- acos(dot.prods / (norms.x * norms.y))
-  as.numeric(thetas)
-}
-
-## get angle with two points
-angle <- function(x, y, cx, cy){
-  delta_x <- x - cx
-  delta_y <- y - cy
-  radian  <- atan2(delta_y, delta_x);
-  degree  <- radian*180/pi + 270;
-  return(list(radian=radian, degree=degree));
-}
-
-## get angle by one point
-angle1 <- function(x, y){
-  angle <- atan(y / x) * 180 / pi;
-  return(angle);
-}
-
-## get angle by one point
-y <- 4;
-x <- 4;
-(angle1 = atan(y / x) * 180 / pi + 360);
-(angle2 = atan2(y, x) * 180 / pi + 360);
 
 ## get angle with two points
 ## delta_x = touch_x - center_x
@@ -85,9 +34,9 @@ for (i in 1:ncol(dat1)){
   r <- r0[i];
   s.w <- 360 -   angle(400+50, 400+r, 400, 400)$degree;
   e.w <- 2*360 - angle(400-50, 400+r, 400, 400)$degree;
-  
+
   out <- n2p(400, 400, r, n, start.w=s.w, end.w=e.w);
-  
+
   clu.m <- max(dat1[,i]);
   if (i > 1){
     for (clu.i in 1:clu.m){
@@ -114,12 +63,12 @@ for (i in 1:ncol(dat1)){
   r <- r0[i];
   s.w <- 360 -   angle(400+50, 400+r, 400, 400)$degree;
   e.w <- 2*360 - angle(400-50, 400+r, 400, 400)$degree;
-  
+
   out <- n2p(400, 400, r, n, start.w=s.w, end.w=e.w);
   par(font = 2,family = 'sans')
-  
+
   text(400, 400+r, paste0("", n), cex=3);
-  
+
   clu.m <- max(dat1[,i]);
   cex <- NULL;
   for (j in 1:clu.m){
