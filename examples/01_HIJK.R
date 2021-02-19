@@ -9,7 +9,7 @@ layout(matrix(c(1,1,2,2,
                 3,3,5,5), nrow = 4, ncol = 4, byrow = TRUE));
 par("mar"=c(7, 7, 7, 7));
 
-source('shadowtext.R')
+source('supp_func.R')
 cols <- rainbow(10, alpha=0.8);
 
 clu.v <- clu[,23];

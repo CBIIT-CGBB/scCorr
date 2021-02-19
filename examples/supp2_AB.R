@@ -5,10 +5,9 @@ layout(matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3, byrow = TRUE))
 par("mar"=c(7, 7, 7, 2))
 options(stringsAsFactors = F);
 
-source("./examples/c_mapper.R");
-source("./examples/shadowtext.R")
+source("supp_func.R");
 
-dat <- read.table("./data/01/do_tsne30_2000.txt", header=T); 
+dat <- read.table("./data/01/do_tsne30_2000.txt", header=T);
 clu <- read.table("./data/01/03clust_table.txt", header=T);
 
 
@@ -51,7 +50,7 @@ for (n in clu.n){
   cols  <- rainbow(clu.j, alpha=0.6);
   cols  <- sample(cols)
   out   <- mapper(dat, clu.v);
-  
+
   cex <- out$coord[,3]/100;
   main <- paste0("cluster number:", clu.j)
   plot(out$coord[,1], out$coord[,2], pch=19, col=cols, cex=cex, xlab="", ylab="", main='');
@@ -60,4 +59,3 @@ for (n in clu.n){
   title(xlab="tSNE 1", line=4, cex.lab=2, family = "sans")
 }
 dev.off()
-

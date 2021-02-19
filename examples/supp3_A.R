@@ -2,7 +2,7 @@ rm(list=ls());
 
 pdf("supp3_A.pdf", 5,5);
 layout(matrix(c(1), nrow = 1, ncol =1, byrow = TRUE))
-source("./examples/c_m.R");
+source("supp_func.R");
 dat0 <- read.table("./data/01/03clust_table.txt", header=T);
 d.i  <- grep("0", colnames(dat0))[1:10];
 d.i  <- 2:22;
@@ -11,9 +11,9 @@ dat  <- dat0[, d.i];
 out  <- m2table(dat);
 
 scale.v <- function(v, a, b) {
-  v <- v-min(v); 
-  v <- v/max(v); 
-  v <- v*(b-a);  
+  v <- v-min(v);
+  v <- v/max(v);
+  v <- v*(b-a);
   v+a
 }
 
@@ -34,7 +34,7 @@ k        <- as.numeric(k);
 l.adj    <- 0.9;
 top.n    <- max(k);
 top.m    <- min(k);
-lwd.from <- 1; 
+lwd.from <- 1;
 lwd.to   <- 1;
 col.n    <- ncol(dat);
 row.n    <- nrow(dat);
@@ -82,7 +82,7 @@ for (j in 1:ncol(dat)){
     str <- cbind(dat[,j-1], dat[,j]);
   }
   str.out <- count.rows2(str);
-  str.u   <- as.numeric(sort(unique(str.out[,3]))); 
+  str.u   <- as.numeric(sort(unique(str.out[,3])));
   cols    <- rainbow(length(str.u), alpha=0.6)
   for (n in str.u){
     ## length(str.i) should be 1.
@@ -109,4 +109,3 @@ out2 <- out.s[!duplicated(out.s[,4]),];
 text(out2[,3]-1.3, out2[,4], c(1,20:40), cex=0.8);
 ## return(list(xy=out.s, clu.table=dat));
 dev.off()
-
