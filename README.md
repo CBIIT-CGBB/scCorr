@@ -8,9 +8,9 @@ scCorr: R package for single cell association or correlation analysis
 
 ### 2. Motivation
 One of the challenges in single cell RNA-sequence analysis is abundance of zero values that results in biased estimation of gene-gene correlations for downstream analyses. Here, we present a novel graph-based k-partitioning method by merging “homology” cells to reduce the zero values. The method is robust and reliable for the detection of correlated gene pairs that is fundamental for network construction, gene-gene interaction, and cellular -omic analyses.   
-<h3 align="center">
-data analysis workflow
-</h3>
+<h4 align="center">
+Data analysis workflow
+</h4>
 <p align="left">
 <img src="Image/workflow_diagram.png" width="700" height="234">  
 </p>
