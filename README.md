@@ -15,7 +15,7 @@ Data analysis workflow
 <img src="Image/workflow_diagram.png" width="800" height="267">  
 </p>
 
-The example R codes are  
+The example R codes are [tsne](examples/)
 
 ### 3. Data and the zero count distributions
 <p align="left">
