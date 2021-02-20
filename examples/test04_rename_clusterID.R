@@ -1,7 +1,7 @@
 rm(list=ls());
 
 options(stringsAsFactors = F);
-dat <- read.table("02clust_table_raw.txt", header=T);
+dat <- read.table("../data/01/02clust_table_raw.txt", header=T);
 
 out.s <- dat[,1];
 new.c <- dat[,1];
@@ -15,7 +15,7 @@ for (j in 2:ncol(dat)){
     n.u   <- unique(dat[the.i,j]);
     old.c <- c(old.c, n.u);
   }
-  ## re-sign the cluster ID by the order 
+  ## re-sign the cluster ID by the order
   new.c <- rep(NA, nrow(dat));
   i <- 0;
   for (o.c in old.c){
@@ -44,7 +44,3 @@ for (i in 1:ncol(dat)){
     print (c(colnames(dat)[i], length(c.t), length(m)))
   }
 }
-
-
-
-

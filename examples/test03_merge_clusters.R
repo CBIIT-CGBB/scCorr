@@ -33,7 +33,3 @@ for (i in 1:ncol(out.s)){
     }
   }
 }
-
-
-
-
