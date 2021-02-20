@@ -12,7 +12,7 @@ One of the challenges in single cell RNA-sequence analysis is abundance of zero 
 Data analysis workflow
 </h4>
 <p align="left">
-<img src="Image/workflow_diagram.png" width="700" height="234">  
+<img src="Image/workflow_diagram.png" width="800" height="267">  
 </p>
 ### 3. Data and the zero count distributions
 <p align="left">
