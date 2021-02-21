@@ -29,7 +29,7 @@ y.len <-  seq(1, ncol(dat), length.out=top.n+1);
 y.l   <-  seq(ncol(dat), 0, length.out=ncol(dat)+1);
 
 plot(x.len, y.len, type="n", ylab="", xlab="", axes=FALSE);
-fig_label('A', pos='topleft',cex=5)
+fig_label('A', pos='topleft',cex=3)
 x1 <- 0;
 x2 <- 0;
 y1 <- top.n + 1;
