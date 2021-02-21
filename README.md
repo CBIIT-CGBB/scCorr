@@ -30,6 +30,17 @@ The example R codes are: [tsne](examples/test01_do_tsne.R), [k-partitioning](exa
 
 [R codes](examples/01_EFG.R)
 
+A total of 21,430 genes have zero values in at least one cell (A) and more than 95% of
+15,973 cells show zero values in at least one cell (B).Among a set of 347 genes from KEGG, all genes
+have zero value in at least one cell (C) and 95% of 15,973 cells contains zero value in at least one gene
+(D).
+
+E-G shows reductions of zero values in merged cells. The percentage of zero values of 21,430
+genes is remarkably reduced in the merged cells. The reduction of zero value is approximately 50%
+among 50 merged cells (E). Similarly, zero values of 347 genes selected from KEGG are reduced in
+merged cells (F). The reduction of zero values in merged cells is consistently observed in 6 different
+number of cell sets (G).
+
 ### 4. Graphical based k-partitioning approach
 
 <p align="left">
@@ -37,6 +48,11 @@ The example R codes are: [tsne](examples/test01_do_tsne.R), [k-partitioning](exa
 </p>
 
 [R codes](examples/01_HIJK.R)
+
+H-L present the workflow and features of scCorr method. First, data dimensional
+reduction and cell classification by tSNE and cell type identification using mark gene approach (H).
+Secondly, cell partitioning based on tSNE plot by using scCorr with different number of clusters (I: k=100;
+J: k=1,000). Average number of cells per cluster is shown (K).
 
 ### 5. Cluster tree visualization
 
@@ -46,18 +62,30 @@ The example R codes are: [tsne](examples/test01_do_tsne.R), [k-partitioning](exa
 
 [R codes](examples/01_L.R)
 
+ScCorr enables to trace evolutional process of each petitioned cluster (L).
+
 ### 6. Correlation method comparison
 
 <img src="Image/2_AB.png" width="400" height="200"><img src="Image/2_CD.png" width="400" height="200">
 
 [R codes](examples/02_AB.R) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[R codes](examples/02_CD.R)
 
+Correlated genes are
+shown in –log10 p values (A) and r value (B). Gene-gene correlations between two methods are in the
+same direction in some cases (C) while gene-gene correlations are in opposite direction between two
+methods in other cases (D).
 ### 7. The correlation method validation
 
 <img src="Image/2_EF.png" width="400" height="200"><img src="Image/2_GH.png" width="400" height="200">
 
 [R codes](examples/02_EF.R)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[R codes](examples/02_GH.R)
+
+(D). Gene-gene correlation varies in different number of clusters. E and F shows
+top 10 correlated genes in different number of clusters partitioned by scCorr among CD4 T cells
+evaluated by –log 10 (E) and r value (F). Performances of scCorr for cell type identification of CD4 T cells
+are shown in G (k=117) and H (k=10). Area Under Curve (AUC) was greater by using scCorr (AUC: 0.97
+and 0.96) than using unflustered single cell (AUC=0.55).
 
 ### 8. Distributions of zero value of gene expressions
 
