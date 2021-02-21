@@ -1,5 +1,5 @@
 rm(list=ls());
-
+source('supp_func.R');
 pdf("1_L.pdf", 20, 20);
 par(mar=c(4,4,4,4));
 
@@ -12,8 +12,8 @@ par(mar=c(4,4,4,4));
 ## (theta_radians = atan2(delta_y, delta_x))
 ## theta_radians*180/pi
 
-dat1 <- read.table("./data/01/03clust_table_cluID.txt", header=T);
-dat2 <- read.table("./data/01/03clust_table_cluNum.txt", header=T);
+dat1 <- read.table("../data/01/03clust_table_cluID.txt", header=T);
+dat2 <- read.table("../data/01/03clust_table_cluNum.txt", header=T);
 dat1 <- dat1[,-c(3:11,13:21)];
 dat2 <- dat2[,-c(3:11,13:21)];
 dat1 <- dat1[,1:10];
@@ -83,4 +83,5 @@ for (i in 1:ncol(dat1)){
   oldx <- out$x;
   oldy <- out$y;
 }
+fig_label('L', pos='customized',cex=5)
 dev.off();

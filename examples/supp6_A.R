@@ -9,7 +9,7 @@ par("mar"=c(5, 5, 7, 5))
 eq = function(x){80*(1250*x - 140823)/1700}
 plot(eq(100:500), type='l',,main  = 'range(xy) = 112.65840 + 0.01799 * cell number',ylab = '', xlab = 'Range of XY Coordinates')
 ## Compution Time for 5967 single cells
-out.s <- read.table("./data/supp/01clust1_out.txt", header=T);
+out.s <- read.table("../data/supp/01clust1_out.txt", header=T);
 clu.u <- unique(out.s[,1]);
 y.max <- max(out.s[,3]);
 cols  <- rainbow(length(clu.u), alpha=0.8);
@@ -26,7 +26,7 @@ legend(20, 170, legend=clu.u[1:10], lwd=2, col=cols[1:10], bty="n");
 legend(150, 170, legend=clu.u[10:19], lwd=2, col=cols[10:19], bty="n");
 
 ## Compution Time for 15973 single cells
-out.s <- read.table("./data/supp/02clust2_out.txt", header=T);
+out.s <- read.table("../data/supp/02clust2_out.txt", header=T);
 clu.u <- unique(out.s[,1]);
 y.max <- max(out.s[,3]);
 clu.u <- unique(out.s[,1]);

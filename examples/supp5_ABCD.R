@@ -1,16 +1,17 @@
 rm(list=ls());
 options(stringsAsFactors = F);
+source("supp_func.R");
 library(OmicPlot)
 ## load data
-load('./data/cd4_dat.Rdata')
-load('./data/cd8_dat.Rdata')
-load('./data/NK_dat.Rdata')
-load('./data/other_dat.Rdata')
-load('./data/b_dat.Rdata')
+load('../data/cd4_dat.Rdata')
+load('../data/cd8_dat.Rdata')
+load('../data/NK_dat.Rdata')
+load('../data/other_dat.Rdata')
+load('../data/b_dat.Rdata')
 ## merge data
 dat <- dplyr::bind_cols(cd4_dat,cd8_dat,b_dat,NK_dat,other_dat)
 ## gene annotation
-ann <- read.table("./data/01/gene4matrix_Seurat.txt", header=T);
+ann <- read.table("../data/01/gene4matrix_Seurat.txt", header=T);
 sum(row.names(dat)==row.names(ann))==nrow(ann);
 
 pdf("supp5_ABCD.pdf", 10,10);
@@ -22,7 +23,7 @@ cols  <- rainbow(10, alpha=0.6);
 
 ct.c  <- c(6:10, 12:16, 19,20, 28:33); ## 28:37 CD4Tcells
 ## clu100:28 clu50:23
-clu   <- read.table("./data/01/03clust_table.txt", header=T);
+clu   <- read.table("../data/01/03clust_table.txt", header=T);
 
 clu.i <- which(clu[,23] %in% ct.c);
 clu.s <- clu[clu.i, c(23, 28)];
@@ -31,8 +32,8 @@ dat.s <- dat[,dat.i];
 clu.u <- unique(clu.s[,2]);
 
 
-dat1  <- read.table("./data/supp/09cor_glm_clu_CD4/100.txt", header=T);
-dat2  <- read.table("./data/supp/08cor_glm_CD4.txt", header=T);
+dat1  <- read.table("../data/supp/09cor_glm_clu_CD4/100.txt", header=T);
+dat2  <- read.table("../data/supp/08cor_glm_CD4.txt", header=T);
 dat1  <- dat1[!duplicated(dat1[,c(1,2)]),];
 dat2  <- dat2[!duplicated(dat2[,c(1,2)]),];
 d1.s  <- paste0(dat1[,1], "_", dat1[,2]);
@@ -54,7 +55,7 @@ for (i in 1:100){
                  "\np.R:", round(dat2[g2.i, 3], 3), " s.R:", round(dat2[g2.i, 4], 3))
   plot(v1, v2, xlab=g1, ylab=g2, pch=19, col=cols[7], main=main);
   abline(lm(v2 ~ v1), col=cols[1], lwd=2);
-  
+  fig_label('A', pos='topleft',cex=3)
   v1.m <- mean(v1);
   v1.j <- which(v1 >= v1.m);
   val.l <- NULL;
@@ -85,8 +86,7 @@ for (i in 1:100){
                  "\np.R:", round(dat1[i, 3], 3), " s.R:", round(dat1[i, 4], 3))
   plot(v1.c, v2.c, xlab=g1, ylab=g2, pch=19, col=cols[7], main=main);
   abline(lm(v2.c ~ v1.c), col=cols[1], lwd=2);
-  
-  
+  fig_label('B', pos='topleft',cex=3)
   v1c.m <- mean(v1.c);
   v1c.j <- which(v1.c >= v1c.m);
   valc.l <- NULL;

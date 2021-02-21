@@ -1,11 +1,12 @@
 rm(list=ls());
-
+source("supp_func.R");
 pdf("supp3_BC.pdf", 16, 8);
+
 layout(matrix(c(1,2), nrow = 1, ncol = 2, byrow = TRUE))
 par(mar=c(1,1,1,1));
 
-dat1 <- read.table("./data/01/03clust_table_cluID.txt", header=T);
-dat2 <- read.table("./data/01/03clust_table_cluNum.txt", header=T);
+dat1 <- read.table("../data/01/03clust_table_cluID.txt", header=T);
+dat2 <- read.table("../data/01/03clust_table_cluNum.txt", header=T);
 
 # Plot 20 - 40 clusters
 clu.n <- seq(20, 40, length.out = 21);
@@ -77,13 +78,13 @@ for (i in 1:ncol(dat1)){
   oldx <- out$x;
   oldy <- out$y;
 }
-
+fig_label('B', pos='topleft',cex=5)
 
 
 
 # Plot clusters 100 -1000
-dat1  <- read.table("./data/01/03clust_table_cluID.txt", header=T);
-dat2  <- read.table("./data/01/03clust_table_cluNum.txt", header=T);
+dat1  <- read.table("../data/01/03clust_table_cluID.txt", header=T);
+dat2  <- read.table("../data/01/03clust_table_cluNum.txt", header=T);
 clu.n <- seq(100, 1000, length.out = 10);
 clu.n <- paste0("clu", clu.n);
 clu.i <- which(colnames(dat1) %in% clu.n)
@@ -151,5 +152,5 @@ for (i in 1:ncol(dat1)){
   oldx <- out$x;
   oldy <- out$y;
 }
-
+fig_label('C', pos='topleft',cex=5)
 dev.off();

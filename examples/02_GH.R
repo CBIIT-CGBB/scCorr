@@ -1,12 +1,13 @@
 rm(list=ls());
 
 pdf("2_GH.pdf", 20,10);
+source('supp_func.R');
 layout(matrix(c(1,2), nrow = 1, ncol = 2, byrow = TRUE))
 par("mar"=c(7, 7, 7, 2))
 
 
 
-load("./data/02/06sc_roc.RData");
+load("../data/02/06sc_roc.RData");
 text2 <- paste0("Single Cell AUC:", round(out$auc, 2));
 
 num  <- c(20:40, seq(10, 1000, length.out=100));
@@ -27,7 +28,7 @@ i   <- 0;
 out2 <- NULL;
 for (n in num){
   i <- i + 1;
-  inff <- paste0("./data/02/07clu_roc/CD4_", n, ".RData");
+  inff <- paste0("../data/02/07clu_roc/CD4_", n, ".RData");
   load(inff);
   x <- out$perf@x.values[[1]];
   y <- out$perf@y.values[[1]];
@@ -38,9 +39,9 @@ for (n in num){
 text1 <- paste0("scCorr Cluster AUC:", round(mean(out2), 2));
 text(0.6, 0.3, text1,cex=3);
 text(0.6, 0.18, text2,cex=3);
+fig_label('G', pos='topleft',cex=5)
 
-
-load("./data/02/06sc_roc.RData");
+load("../data/02/06sc_roc.RData");
 
 
 text2 <- paste0("Unclustered Single Cell:", round(out$auc, 2));
@@ -58,7 +59,7 @@ i   <- 0;
 out2 <- NULL;
 for (n in num){
   i <- i + 1;
-  inff <- paste0("./data/02/07clu_roc/CD4_", n, ".RData");
+  inff <- paste0("../data/02/07clu_roc/CD4_", n, ".RData");
   load(inff);
   x <- out$perf@x.values[[1]];
   y <- out$perf@y.values[[1]];
@@ -69,6 +70,6 @@ for (n in num){
 text1 <- paste0("scCorr Cluster AUC:", round(mean(out2), 2));
 text(0.6, 0.3, text1,cex=3);
 text(0.6, 0.18, text2,cex=3);
-
+fig_label('H', pos='topleft',cex=5)
 
 dev.off()

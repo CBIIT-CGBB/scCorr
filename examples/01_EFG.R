@@ -1,7 +1,8 @@
 rm(list=ls());
 
 pdf("1_EFG.pdf", 24, 8);
-load("./data/01/00zero_dist.RData")
+source('supp_func.R');
+load("../data/01/00zero_dist.RData")
 layout(matrix(c(1,2,3), nrow = 1, ncol = 3, byrow = TRUE));
 par("mar"=c(7, 7, 7, 7));
 
@@ -15,15 +16,17 @@ boxplot(out.f$out.s, col=cols[7], border=cols[7], cex.axis=2.3);
 title(font.main = 1,main="21430 full genes", xlab="", ylab = "",pch=19, cex.main=3,cex.lab=2, cex.axis= 2.5);
 title(ylab="% of Zero Value", line=4, cex.lab=4, family = "sans");
 title(xlab="Number of Cells", line=4.5, cex.lab=4, family = "sans");
+fig_label('E', pos='topleft',cex=5)
 
 boxplot(out.f$out2, col=cols[7], border=cols[7], cex.axis=2.3);
 title(font.main = 1,main="347 pathway genes", xlab="", ylab = "",pch=19, cex.main=3,cex.lab=2, cex.axis= 2.5);
 title(ylab="% of Zero Value", line=4, cex.lab=4, family = "sans");
 title(xlab="Number of Cells", line=4.5, cex.lab=4, family = "sans");
+fig_label('F', pos='topleft',cex=5)
 
 for (i in 1:length(f.s)){
   n    <- f.s[i];
-  inff <- paste0("./data/01/n", n, ".RData");
+  inff <- paste0("../data/01/n", n, ".RData");
   load(inff);
   dat <- t(out.s);
   dat <- dat/num[i];
@@ -40,5 +43,6 @@ for (i in 1:length(f.s)){
     points(v, type="l", col=col2[i], lwd=6)
   }
 }
+fig_label('G', pos='topleft',cex=5)
 
 dev.off();

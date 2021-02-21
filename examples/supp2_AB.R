@@ -7,8 +7,8 @@ options(stringsAsFactors = F);
 
 source("supp_func.R");
 
-dat <- read.table("./data/01/do_tsne30_2000.txt", header=T);
-clu <- read.table("./data/01/03clust_table.txt", header=T);
+dat <- read.table("../data/01/do_tsne30_2000.txt", header=T);
+clu <- read.table("../data/01/03clust_table.txt", header=T);
 
 
 # Show clusters by color
@@ -34,6 +34,7 @@ for (n in clu.n){
       x   <- mean(dat[c.i,1]);
       y   <- mean(dat[c.i,2]);
       shadowtext(x, y, j);
+      fig_label('A', pos='topleft',cex=5)
     }
   }
 }
@@ -57,5 +58,8 @@ for (n in clu.n){
   title(font.main = 1,main= main, xlab="", ylab = "",pch=19, cex.main=3,cex.lab=2, cex.axis= 2.5);
   title(ylab="tSNE 2", line=4, cex.lab=2, family = "sans")
   title(xlab="tSNE 1", line=4, cex.lab=2, family = "sans")
+  if(n == 50){
+    fig_label('B', pos='topleft',cex=5)
+  }
 }
 dev.off()

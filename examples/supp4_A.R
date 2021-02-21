@@ -14,9 +14,9 @@ par(mfrow=c(4,3));
 for (t.n in ty.n){
   for (n.n in num.n){
     if (n.n == "n0"){
-      inff  <- paste0("./data/supp/09cor_glm_clu_", t.n, "/", top.n, ".txt");
+      inff  <- paste0("../data/supp/09cor_glm_clu_", t.n, "/", top.n, ".txt");
     } else {
-      inff  <- paste0("./data/supp/13cor_glm_clu_", t.n, "_", n.n, "/", top.n, ".txt");
+      inff  <- paste0("../data/supp/13cor_glm_clu_", t.n, "_", n.n, "/", top.n, ".txt");
     }
     dat0  <- read.table(inff, header=T);
     gen0  <- paste0(dat0[1:10,1], "_", dat0[1:10,2]);
@@ -24,9 +24,9 @@ for (t.n in ty.n){
     out.s <- NULL;
     for (n in clu.n){
       if (n.n == "n0"){
-        inff  <- paste0("./data/supp/09cor_glm_clu_", t.n, "/", n, ".txt");
+        inff  <- paste0("../data/supp/09cor_glm_clu_", t.n, "/", n, ".txt");
       } else {
-        inff  <- paste0("./data/supp/13cor_glm_clu_", t.n, "_", n.n, "/", n, ".txt");
+        inff  <- paste0("../data/supp/13cor_glm_clu_", t.n, "_", n.n, "/", n, ".txt");
       }
       dat2 <- read.table(inff, header=T);
       dat2[,8] <- -log10(dat2[,8]);

@@ -3,7 +3,7 @@ rm(list=ls());
 pdf("supp3_A.pdf", 5,5);
 layout(matrix(c(1), nrow = 1, ncol =1, byrow = TRUE))
 source("supp_func.R");
-dat0 <- read.table("./data/01/03clust_table.txt", header=T);
+dat0 <- read.table("../data/01/03clust_table.txt", header=T);
 d.i  <- grep("0", colnames(dat0))[1:10];
 d.i  <- 2:22;
 colnames(dat0)[d.i]
@@ -29,7 +29,7 @@ y.len <-  seq(1, ncol(dat), length.out=top.n+1);
 y.l   <-  seq(ncol(dat), 0, length.out=ncol(dat)+1);
 
 plot(x.len, y.len, type="n", ylab="", xlab="", axes=FALSE);
-
+fig_label('A', pos='topleft',cex=5)
 x1 <- 0;
 x2 <- 0;
 y1 <- top.n + 1;

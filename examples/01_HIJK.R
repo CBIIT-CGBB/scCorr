@@ -1,7 +1,7 @@
 rm(list=ls());
-
-cty <- read.table("./data/01/01cluster_ct.txt", header=T);
-clu <- read.table("./data/01/03clust_table.txt", header=T);
+source('supp_func.R');
+cty <- read.table("../data/01/01cluster_ct.txt", header=T);
+clu <- read.table("../data/01/03clust_table.txt", header=T);
 pdf("1_HIJK.pdf", 23, 20);
 layout(matrix(c(1,1,2,2,
                 1,1,2,2,
@@ -13,7 +13,7 @@ source('supp_func.R')
 cols <- rainbow(10, alpha=0.8);
 
 clu.v <- clu[,23];
-dat <- read.table("./data/01/do_tsne30_2000.txt", header=T);
+dat <- read.table("../data/01/do_tsne30_2000.txt", header=T);
 
 
 
@@ -38,6 +38,7 @@ for (i in 1:length(cty.u)){
   y   <- mean(dat[d.i, 2]);
   shadowtext(x, y, cty.n[i],col ='black',bg = 'white',cex = 3);
 }
+fig_label('H', pos='topleft',cex=5)
 
 col0 <- rainbow(10, alpha=0.6);
 clu.n <- c(100,1000);
@@ -55,11 +56,13 @@ for (n in clu.n){
        xlab="", ylab="", main=main);
   title(ylab="tSNE 2", line=4, cex.lab=3.5, family = "sans")
   title(xlab="tSNE 1", line=4, cex.lab=4.5, family = "sans")
+  if (n == 100){ fig_label('I', pos='topleft',cex=5)}
+  else{fig_label('J', pos='topleft',cex=5)}
 }
 
 
 num    <- 15973;
-dat    <- read.table("./data/01/02clust_table_raw.txt", header=T);
+dat    <- read.table("../data/01/02clust_table_raw.txt", header=T);
 
 clu1.n <- seq(100, 1000, length.out = 10);
 clu1.e <- num/clu1.n;
@@ -93,6 +96,7 @@ boxplot(dat2.l, col='#CCCC00', border = '#CC0000',
 points(1:10, clu2.e, col='#CC0000', pch=19,cex = 2);
 title(ylab="Number of Cells", line=4, cex.lab=4, family = "sans")
 title(xlab="Cluster Number", line=4, cex.lab=4, family = "sans")
+fig_label('K', pos='topleft',cex=5)
 
 boxplot(dat1.l, col='#CCCC00', border = '#CC0000',
         names = c("100","200","300","400","500","600","700","800","900","1000"),cex.lab=2);

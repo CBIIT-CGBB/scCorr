@@ -1,18 +1,20 @@
 rm(list=ls());
 options(stringsAsFactors = F);
 ## load data
-load('./data/cd4_dat.Rdata')
-load('./data/cd8_dat.Rdata')
-load('./data/NK_dat.Rdata')
-load('./data/other_dat.Rdata')
-load('./data/b_dat.Rdata')
+load('../data/cd4_dat.Rdata')
+load('../data/cd8_dat.Rdata')
+load('../data/NK_dat.Rdata')
+load('../data/other_dat.Rdata')
+load('../data/b_dat.Rdata')
+
+source('supp_func.R');
 ## merge data
 dat <- dplyr::bind_cols(cd4_dat,cd8_dat,b_dat,NK_dat,other_dat)
 ## gene annotation
-ann <- read.table("./data/01/gene4matrix_Seurat.txt", header=T, row.names=1);
+ann <- read.table("../data/01/gene4matrix_Seurat.txt", header=T, row.names=1);
 sum(row.names(dat)==row.names(ann))==nrow(ann);
 ## relationships of 3 pathway genes of KEGG
-gene <- read.table("./data/01/hsa04662_f.txt", header=T);
+gene <- read.table("../data/01/hsa04662_f.txt", header=T);
 g.u  <- unique(c(gene[,1], gene[,2]));
 dat.i <- which(ann[,1] %in% g.u);
 dat.s <- dat[dat.i,];
@@ -39,24 +41,28 @@ hist(z1, col=cols[7], border=cols[7], breaks=100, xlim=c(70, 100),
      ylab = '',cex.main=3,cex.lab=4, cex.axis = 2.5);
 title(ylab="Number of Genes", line=4, cex.lab=4, family = "sans")
 title(xlab="% of Zero Value", line=4.5, cex.lab=4, family = "sans")
+fig_label('A', pos='topleft',cex=5)
 
 hist(z3, col=cols[7], border=cols[7], breaks=100, xlim=c(70, 100), 
      font.main = 1,main="15973 single cells; 21430 genes", xlab="",
      ylab = '',cex.main=3,cex.lab=4, cex.axis= 2.5);
 title(ylab="Number of Cells", line=4, cex.lab=4, family = "sans")
 title(xlab="% of Zero Value", line=4.5, cex.lab=4, family = "sans")
+fig_label('B', pos='topleft',cex=5)
 
 hist(z2, col=cols[7], border=cols[7], breaks=100, xlim=c(70, 100), 
      font.main = 1,main="347 pathway genes with 15973 single cells", xlab="",ylab = '',
      cex.main=3,cex.lab=4, cex.axis= 2.5);
 title(ylab="Number of Genes", line=4, cex.lab=4, family = "sans")
 title(xlab="% of Zero Value", line=4.5, cex.lab=4, family = "sans")
+fig_label('C', pos='topleft',cex=5)
 
 hist(z4, col=cols[7], border=cols[7], breaks=100, xlim=c(70, 100), 
      font.main = 1,main="15973 single cells with 347 pathway genes", xlab="",ylab = '',
      cex.main=3,cex.lab=4, cex.axis= 2.5);
 title(ylab="Number of Cells", line=4, cex.lab=4, family = "sans")
 title(xlab="% of Zero Value", line=4.5, cex.lab=4, family = "sans")
+fig_label('D', pos='topleft',cex=5)
 
 dev.off();
 

@@ -1,5 +1,5 @@
 rm(list=ls());
-
+source('supp_func.R');
 pdf("2_EF.pdf", 20,10);
 layout(matrix(c(1,2), nrow = 1, ncol = 2, byrow = TRUE))
 par("mar"=c(7, 7, 7, 2))
@@ -9,12 +9,12 @@ clu.n <- c(seq(40, 100, length.out = 7), seq(200, 1000, length.out = 9));
 cols  <- rainbow(10, alpha=0.8);
 
 
-dat0  <- read.table("./data/02/cor_glm_clu_CD4_n5/40.txt", header=T);
+dat0  <- read.table("../data/02/cor_glm_clu_CD4_n5/40.txt", header=T);
 gen0  <- paste0(dat0[1:10,1], "_", dat0[1:10,2]);
 
 out.s <- NULL;
 for (n in clu.n){
-  inff <- paste0("./data/02/cor_glm_clu_CD4_n5/", n, ".txt");
+  inff <- paste0("../data/02/cor_glm_clu_CD4_n5/", n, ".txt");
   dat2 <- read.table(inff, header=T);
   dat2[,8] <- -log10(dat2[,8]);
   gen2   <- paste0(dat2[,1], "_", dat2[,2]);
@@ -44,7 +44,7 @@ for (g in gen.u){
   }
 }
 axis(1, at=1:length(clu.n), labels=clu.n,cex.axis=2.5)
-
+fig_label('E', pos='topleft',cex=5)
 ylim <- range(out.s[,3]);
 i    <- 0;
 for (g in gen.u){
@@ -61,5 +61,5 @@ for (g in gen.u){
   }
 }
 axis(1, at=1:length(clu.n), labels=clu.n,cex.axis=2.5)
-
+fig_label('F', pos='topleft',cex=5)
 dev.off()
