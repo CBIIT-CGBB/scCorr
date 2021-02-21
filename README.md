@@ -12,7 +12,7 @@ One of the challenges in single cell RNA-sequence analysis is abundance of zero 
 Data analysis workflow
 </h4>
 <p align="left">
-<img src="Image/workflow_diagram.png" width="800" height="267">  
+<img src="Image/workflow_diagram.png" width="700" height="233">  
 </p>
 
 The example R codes are: [tsne](examples/test01_do_tsne.R), [k-partitioning](examples/test02_do_GCluster.R), [merging clusters](examples/test03_merge_clusters.R), [cluster ID renaming](examples/test04_rename_clusterID.R), [correlation analysis](examples/test05_do_corr.R). 
