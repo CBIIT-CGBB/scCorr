@@ -103,9 +103,9 @@ Distributions of zero value expressions in four sets of simulated datasets (A) a
 [R codes](examples/supp2_AB.R)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-t-SNE plot-based k-partitioning cluster. All cells are clustered as 50, 100, and 10,000 groups (A).
+t-SNE plot-based k-partitioning cluster. All cells are clustered as 50, 100, and 1,000 groups (A).
 Three plots at the bottom are identical structure as three plots (B). Each dot represents a cluster and the size of size is 
-proportional to the cluster size  
+proportional to the cluster size.  
 
 
 ### 10. Tree-based visualization of cell clusters  
