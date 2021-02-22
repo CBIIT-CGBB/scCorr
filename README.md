@@ -1,10 +1,10 @@
 scCorr: R package for single cell association or correlation analysis
 =====================================================================
 
-### 1. Installaling
+### 1. Installation
 
     library('devtools')
-    install_github("CBIIT-CGBB/scCorr",auth_token = 'cbd6dad89a1f8c12c8cb54bfca9c3027796835ea')
+    install_github("CBIIT-CGBB/scCorr")
 
 ### 2. Motivation
 One of the challenges in single cell RNA-sequence analysis is abundance of zero values that results in biased estimation of gene-gene correlations for downstream analyses. Here, we present a novel graph-based k-partitioning method by merging “homology” cells to reduce the zero values. The method is robust and reliable for the detection of correlated gene pairs that is fundamental for network construction, gene-gene interaction, and cellular -omic analyses.   
