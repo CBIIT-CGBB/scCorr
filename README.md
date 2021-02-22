@@ -50,7 +50,7 @@ number of cell sets (G).
 [R codes](examples/01_HIJK.R)
 
 H-L present the workflow and features of scCorr method. First, data dimensional
-reduction and cell classification by tSNE and cell type identification using mark gene approach (H).
+reduction and cell classification by tSNE and cell type identification using marker gene approach (H).
 Secondly, cell partitioning based on tSNE plot by using scCorr with different number of clusters (I: k=100;
 J: k=1,000). Average number of cells per cluster is shown (K).
 
