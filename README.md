@@ -126,7 +126,7 @@ A line connects two closest clusters.
 [R codes](examples/supp4_A.R)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-Correlation of top 10 co-expressed gene pairs in different number of partitioned clusters: evaluated by p values and r values.   
+Correlation of top 10 co-expressed gene pairs from cluster 40 in different number of partitioned clusters: evaluated by p values and correlation coefficient values. In the title, n#, the numbers are the thresholds for the cluster merging. If one cluster cell number less than the threshold, the cluster will be merged into the adjacent cluster.
 
 ### 12. Correlation by non-clusterd method and by scCorr clustered method
 
