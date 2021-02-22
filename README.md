@@ -81,9 +81,8 @@ methods in other cases (D).
 [R codes](examples/02_EF.R)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[R codes](examples/02_GH.R)
 
-(D). Gene-gene correlation varies in different number of clusters. E and F shows
-top 10 correlated genes in different number of clusters partitioned by scCorr among CD4 T cells
-evaluated by –log 10 (E) and r value (F). Performances of scCorr for cell type identification of CD4 T cells
+E and F show top 10 correlated genes in different number of clusters partitioned by scCorr among CD4 T cells
+evaluated by –log 10 p value (E) and r value (F). Performances of scCorr for cell type identification of CD4 T cells
 are shown in G (k=117) and H (k=10). Area Under Curve (AUC) was greater by using scCorr (AUC: 0.97
 and 0.96) than using unflustered single cell (AUC=0.55).
 
