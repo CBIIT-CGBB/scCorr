@@ -48,7 +48,7 @@ for (i in c(16)){
   title(ylab=g2, line=4, cex.lab =4.5, family = "sans")
   title(xlab=g1, line=5, cex.lab =4.5, family = "sans")
   abline(lm(v2 ~ v1), col=cols[1], lwd=2);
-  fig_label('C', pos='topleft',cex=5)
+  fig_label('D', pos='topleft',cex=5)
   v1.c <- NULL;
   
   
@@ -69,7 +69,7 @@ for (i in c(16)){
   title(ylab=g2, line=4, cex.lab =4.5, family = "sans")
   title(xlab=g1, line=5, cex.lab =4.5, family = "sans")
   abline(lm(v2.c ~ v1.c), col=cols[1],lwd=4);
-  fig_label('D', pos='topleft',cex=5)
+  fig_label('C', pos='topleft',cex=5)
 }
 dev.off()
 
