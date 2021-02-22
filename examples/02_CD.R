@@ -1,7 +1,7 @@
 rm(list=ls());
 source('supp_func.R');
 pdf("2_CD.pdf", 20,10);
-layout(matrix(c(1,2), nrow = 1, ncol = 2, byrow = TRUE))
+layout(matrix(c(2,1), nrow = 1, ncol = 2, byrow = TRUE))
 par("mar"=c(7, 7, 7, 2))
 
 cols  <- rainbow(10, alpha=0.6);
@@ -33,7 +33,7 @@ d2.s  <- paste0(dat2[,1], "_", dat2[,2]);
 
 
 
-for (i in c(16,59)){
+for (i in c(16)){
   g1   <- dat1[i,1];
   g2   <- dat1[i,2];
   g.s  <- paste0(g1, "_", g2);
@@ -42,7 +42,17 @@ for (i in c(16,59)){
   v2.i <- which(ann[,2]==g2)[1];
   v1   <- as.numeric(dat.s[v1.i,]);
   v2   <- as.numeric(dat.s[v2.i,]);
+  main <- paste0("Unclustered: P value:", sprintf("%0.2E", dat2[g2.i,8]), 
+                 "\np.R:", round(dat2[g2.i, 3], 3))
+  plot(v1, v2, xlab='', ylab='', pch=19, col=cols[7], main=main,cex = 5,cex.main=3,font.main = 1,cex.lab=2, cex.axis=2);
+  title(ylab=g2, line=4, cex.lab =4.5, family = "sans")
+  title(xlab=g1, line=5, cex.lab =4.5, family = "sans")
+  abline(lm(v2 ~ v1), col=cols[1], lwd=2);
+  fig_label('C', pos='topleft',cex=5)
   v1.c <- NULL;
+  
+  
+  
   v2.c <- NULL;
   for (j in 1:length(clu.u)){
     c.i  <- which(clu.s[,2]==clu.u[j]);
@@ -53,15 +63,13 @@ for (i in c(16,59)){
     v1.c <- c(v1.c, mean(tmp1));
     v2.c <- c(v2.c, mean(tmp2));
   }
-  main <- paste0(g1, " ", g2, "in Cluster 100")
   main <- paste0("Cluster: P value:", sprintf("%0.2E", dat1[i,8]), 
-                 "\np.R:", round(dat1[i, 3], 3), " s.R:", round(dat1[i, 4], 3))
+                 "\np.R:", round(dat1[i, 3], 3))
   plot(v1.c, v2.c, xlab='', ylab='', pch=19, col=cols[7], main=main,cex = 5,cex.main=3,font.main = 1,cex.lab=2, cex.axis=2);
   title(ylab=g2, line=4, cex.lab =4.5, family = "sans")
   title(xlab=g1, line=5, cex.lab =4.5, family = "sans")
   abline(lm(v2.c ~ v1.c), col=cols[1],lwd=4);
-  if (i == 16){ fig_label('C', pos='topleft',cex=5)}
-  else{fig_label('D', pos='topleft',cex=5)}
+  fig_label('D', pos='topleft',cex=5)
 }
 dev.off()
 
