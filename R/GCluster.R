@@ -122,7 +122,7 @@ GCluster <- function(dat=dat, wt=4, k=NULL, method="louvain"){
   if (clu.n < k){
     do.cluster <- TRUE;
     while (do.cluster){
-      wt0     <- wt0 - wt0/5;
+      wt0     <- wt0 - wt0/2;
       g       <- g0;
       w.i     <- which(E(g)$weight > wt0);
       igraph::E(g)$weight[w.i] <- 0;
