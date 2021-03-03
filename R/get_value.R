@@ -1,7 +1,7 @@
 get_value <- function(dat = dat,d_list = d_list){
   num_c <- length(d_list)
-  res = matrix(, nrow = dim(dat)[1], ncol = num_c)
-  if is.list(d_list){
+  res <- matrix(, nrow = dim(dat)[1], ncol = num_c)
+  if (is.list(d_list)){
   for(i in 1:num_window){
       res[,i] <- rowMeans(dat[,d_list[[i]],drop=FALSE])
   }
