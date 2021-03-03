@@ -19,15 +19,6 @@
    \item{end.v}{maximum of scale}
 }
 
-\author{
- Ying Hu <yhu@mail.nih.gov>
- Chunhua Yan <yanch@mail.nih.gov>
-}
-
-\references{
-##
-}
-
 \examples{
 ##
 }
