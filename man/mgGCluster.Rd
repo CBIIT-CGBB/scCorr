@@ -19,15 +19,6 @@
    \item{rename}{if TRUE, the ID will be renamed.}
 }
 
-\author{
- Ying Hu <yhu@mail.nih.gov>
- Chunhua Yan <yanch@mail.nih.gov>
-}
-
-\references{
-##
-}
-
 \examples{
 ##
 }
