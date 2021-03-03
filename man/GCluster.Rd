@@ -21,14 +21,6 @@
    fast_greedy, infomap or label_prop.}
 }
 
-\author{
- Ying Hu <yhu@mail.nih.gov>
- Chunhua Yan <yanch@mail.nih.gov>
-}
-
-\references{
-##
-}
 
 \examples{
 ##
