@@ -6,6 +6,6 @@ tj_list <- function(dat = dat, ctf = 100){
   node <- out$node
   level <- out$level1
   cell <- level[sapply(level, function(x) length(x) >= 2)]
-  target_indices <- lapply(cell,function(x) sapply(x, function(y) which(row.names(dat_dr) == y),USE.NAMES = FALSE))
+  target_indices <- lapply(cell,function(x) sapply(x, function(y) which(row.names(dat) == y),USE.NAMES = FALSE))
   return(list(target_indices,cell))                                
 }
