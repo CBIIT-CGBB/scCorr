@@ -20,14 +20,6 @@
    \item{cutoff}{it will be a branch if vertex number > cutoff}
 }
 
-\author{
- Ying Hu <yhu@mail.nih.gov>
- Chunhua Yan <yanch@mail.nih.gov>
-}
-
-\references{
-##
-}
 
 \examples{
 ##
