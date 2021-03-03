@@ -19,15 +19,6 @@
    \item{to}{end vetex}
 }
 
-\author{
- Ying Hu <yhu@mail.nih.gov>
- Chunhua Yan <yanch@mail.nih.gov>
-}
-
-\references{
-##
-}
-
 \examples{
 ##
 }
