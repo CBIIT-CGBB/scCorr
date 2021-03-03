@@ -14,7 +14,7 @@ get_value <- function(dat = dat, d_list = d_list){
     for(i in 1:num_c){
       clu.u.i <- clu.u[i];
       c.j     <- which(d_list==clu.u.i);
-      res[,i] <- rowMeans(dat[, c.j, drop=FALSE])
+      res[,i] <- rowMeans(dat[, names(d_list)[c.j], drop=FALSE])
     }
   }
   return(res)
