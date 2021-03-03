@@ -150,26 +150,29 @@ The xy.coordinate is the regions for scaling. For example, xy.coordinate is 50, 
 
 ### 14. Examples of the functions of the package
 
-#### GCluster
+[c_list](test/01test_c_list.R)
 
-#### c_list
+[d_list](test/02test_d_list.R)
 
-#### d_list
+[GCluster](test/03test_GCluster.R)
 
-#### get_value
+[get_value](test/04test_get_value.R)
 
-#### m_list
+[m_list](test/05test_m_list.R)
 
-#### merge_list
+[merge_list](test/06test_merge_list.R)
 
-#### mgGCluster.R
+[mgGCLuster](test/07test_mgGCLuster.R)
 
-#### scale_v
+[scale_v](test/08test_scale_v.R)
 
-#### tjGCluster
+[tj_list](test/09test_tj_list.R)
 
-#### tjGCluster2
+[tjGCluster](test/10test_tjGCluster.R)
 
-#### tj_list
+[tjGCluster2](test/11test_tjGCluster2.R)
+
+
+
 
 
