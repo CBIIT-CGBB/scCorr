@@ -2,11 +2,11 @@
 \alias{GCluster}
 
 \title{
- graph based cluster 2
+ graphical based cluster
 }
 
 \description{
- graph based cluster 2
+ graphical based cluster
 }
 
 \usage{
@@ -23,6 +23,6 @@
 
 
 \examples{
-##
+
 }
 
