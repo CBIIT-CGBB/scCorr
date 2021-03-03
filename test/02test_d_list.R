@@ -1,7 +1,5 @@
 rm(list=ls());
 
-rm(list=ls());
-
 library(scCorr);
 
 ## get data
