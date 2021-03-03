@@ -5,7 +5,6 @@ get_value <- function(dat = dat, d_list = d_list){
     for(i in 1:num_c){
       res[,i] <- rowMeans(dat[,d_list[[i]],drop=FALSE])
     }
-    row.names(res) <- row.names(dat)
   } else {
     ## unique cluster ID
     clu.u <- sort(unique(d_list));
@@ -17,5 +16,6 @@ get_value <- function(dat = dat, d_list = d_list){
       res[,i] <- rowMeans(dat[, names(d_list)[c.j], drop=FALSE])
     }
   }
+  row.names(res) <- row.names(dat)
   return(res)
 }
