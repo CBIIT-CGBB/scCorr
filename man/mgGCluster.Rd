@@ -14,7 +14,7 @@
 }
 
 \arguments{
-   \item{x}{vactor as cluster ID}
+   \item{x}{vector as cluster ID}
    \item{l}{list, each object is vector. all clusters will be renamed as the first one}
    \item{rename}{if TRUE, the ID will be renamed.}
 }
