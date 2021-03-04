@@ -15,7 +15,7 @@ Data analysis workflow
 <img src="Image/workflow_diagram.png" width="600" height="200">  
 </p>
 
-The example R codes are: [tsne](examples/test01_do_tsne.R), [k-partitioning](examples/test02_do_GCluster.R), [merging clusters](examples/test03_merge_clusters.R), [cluster ID renaming](examples/test04_rename_clusterID.R), [correlation analysis](examples/test05_do_corr.R). 
+The example R codes are: [tsne](examples/test01_do_tsne.R), [k-partitioning](examples/test02_do_GCluster.R), [merging clusters](examples/test03_merge_clusters.R), [cluster ID renaming](examples/test04_rename_clusterID.R), [correlation analysis](examples/test05_do_corr.R).
 
 ### 3. Data and the zero count distributions
 <p align="left">
@@ -104,7 +104,7 @@ Distributions of zero value expressions in four sets of simulated datasets (A) a
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 t-SNE plot-based k-partitioning cluster. All cells are clustered as 50, 100, and 1,000 groups (A).
-The same clusters are shown in dot-plot views (B), where each dot represents a cluster and the size is 
+The same clusters are shown in dot-plot views (B), where each dot represents a cluster and the size is
 proportional to the cluster size.  
 
 
@@ -116,28 +116,27 @@ proportional to the cluster size.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[R codes](examples/supp3_BC.R)
 
 Tree-based visualization of cell clusters by k-partitioning algorithm (A: Ladder clusters N=20-40; B: Circle clusters
-N=20-40; C: circle clusters, N=100-1,000). The size of each dot size represents a proportional of the cell number in one cluster. 
+N=20-40; C: circle clusters, N=100-1,000). The size of each dot size represents a proportional of the cell number in one cluster.
 A line connects two closest clusters.  
 
-### 11. Correlation of top 10 co-expressed gene pairs in different number of partitioned clusters
+### 11. Correlation by non-clusterd method and by scCorr clustered method
 
-<img src="Image/supp4_A.png" width="600" height="800">
+<img src="Image/supp4_ABCD.png" width="400" height="400">
 
-[R codes](examples/supp4_A.R)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-Correlation of top 10 co-expressed gene pairs from cluster 40 in different number of partitioned clusters: evaluated by p values and correlation coefficient values. In the title, n#, the numbers are the thresholds for the cluster merging. If one cluster cell number less than the threshold, the cluster will be merged into the adjacent cluster.
-
-### 12. Correlation by non-clusterd method and by scCorr clustered method
-
-<img src="Image/supp5_ABCD.png" width="400" height="400">
-
-[R codes](examples/supp5_A.R)
+[R codes](examples/supp4_ABCD.R)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 Correlation of two co-expression gene pairs: MAPK1 pair and DUSP2 pairs by non-clustered
 Correlation method (A) and by sscCorr clustered method (B).
 
+### 12. Correlation of top 10 co-expressed gene pairs in different number of partitioned clusters
+
+<img src="Image/supp5_A.png" width="600" height="800">
+
+[R codes](examples/supp5_A.R)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Correlation of top 10 co-expressed gene pairs from cluster 40 in different number of partitioned clusters: evaluated by p values and correlation coefficient values. In the title, n#, the numbers are the thresholds for the cluster merging. If one cluster cell number less than the threshold, the cluster will be merged into the adjacent cluster.
 
 ### 13. Estimation of Computation Time
 
@@ -154,13 +153,13 @@ The xy.coordinate is the regions for scaling. For example, xy.coordinate is 50, 
 
 [d_list](test/02test_d_list.R) : Merging homology single cells by one coordinate with density method
 
-[GCluster](test/03test_GCluster.R) : Graphical based clustering 
+[GCluster](test/03test_GCluster.R) : Graphical based clustering
 
 [get_value](test/04test_get_value.R) : Converting single cell based matrix to cluster based matrix
 
 [m_list](test/05test_m_list.R) : Merging homology single cells by one coordinate by window sizes
 
-[merge_list](test/06test_merge_list.R) : Merging cluster into adjacent cluster if the merged cluster single 
+[merge_list](test/06test_merge_list.R) : Merging cluster into adjacent cluster if the merged cluster single
   cell number less than one cutoff
 
 [mgGCLuster](test/07test_mgGCLuster.R) : Merging clusters given the merged cluster IDs
@@ -172,8 +171,3 @@ The xy.coordinate is the regions for scaling. For example, xy.coordinate is 50, 
 [tjGCluster](test/10test_tjGCluster.R) : Trajectory analysis function for [tj_list](test/09test_tj_list.R)
 
 [tjGCluster2](test/11test_tjGCluster2.R) : Trajectory analysis function II for [tj_list](test/09test_tj_list.R)
-
-
-
-
-

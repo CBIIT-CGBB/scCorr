@@ -8,7 +8,7 @@ top.n <- 40;
 
 cols  <- rainbow(10, alpha=0.8);
 
-pdff  <- paste0("supp4_A.pdf");
+pdff  <- paste0("supp5_A.pdf");
 pdf(pdff, 9, 12);
 par(mfrow=c(4,3));
 for (t.n in ty.n){
@@ -66,7 +66,7 @@ for (t.n in ty.n){
       i <- i + 1;
       if (i == 1){
         g.j <- which(out.s[,2]==g);
-        plot(out.s[g.j,3], type="b", col=cols[i], xlab="clu.num", ylab="pearson.Pv", 
+        plot(out.s[g.j,3], type="b", col=cols[i], xlab="clu.num", ylab="Pearson Correlation Coefficient", 
              ylim=ylim, pch=19, lwd=1.2, xaxt="n", main=main2);
       } else {
         g.j <- which(out.s[,2]==g);
@@ -82,7 +82,7 @@ for (t.n in ty.n){
       i <- i + 1;
       if (i == 1){
         g.j <- which(out.s[,2]==g);
-        plot(out.s[g.j,4], type="b", col=cols[i], xlab="clu.num", ylab="spearman.Pv", 
+        plot(out.s[g.j,4], type="b", col=cols[i], xlab="clu.num", ylab="Spearman Correlation Coefficient", 
              ylim=ylim, pch=19, lwd=1.2, xaxt="n", main=main3);
       } else {
         g.j <- which(out.s[,2]==g);
