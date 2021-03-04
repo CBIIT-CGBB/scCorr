@@ -150,27 +150,28 @@ The xy.coordinate is the regions for scaling. For example, xy.coordinate is 50, 
 
 ### 14. Examples of the functions of the package
 
-[c_list](test/01test_c_list.R) : A graph-based k-partitioning Method with scaling
+[c_list](test/01test_c_list.R) : A graph-based k-partitioning method with scaling
 
-[d_list](test/02test_d_list.R)
+[d_list](test/02test_d_list.R) : Merging homology single cells by one coordinate with density method
 
-[GCluster](test/03test_GCluster.R)
+[GCluster](test/03test_GCluster.R) : Graphical based clustering 
 
-[get_value](test/04test_get_value.R)
+[get_value](test/04test_get_value.R) : Converting single cell based matrix to cluster based matrix
 
-[m_list](test/05test_m_list.R)
+[m_list](test/05test_m_list.R) : Merging homology single cells by one coordinate by window sizes
 
-[merge_list](test/06test_merge_list.R)
+[merge_list](test/06test_merge_list.R) : Merging cluster into adjacent cluster if the merged cluster single 
+  cell number less than one cutoff
 
-[mgGCLuster](test/07test_mgGCLuster.R)
+[mgGCLuster](test/07test_mgGCLuster.R) : Merging clusters given the merged cluster IDs
 
-[scale_v](test/08test_scale_v.R)
+[scale_v](test/08test_scale_v.R) : Scaling function
 
-[tj_list](test/09test_tj_list.R)
+[tj_list](test/09test_tj_list.R) : Merging homology single cells by trajectory analysis
 
-[tjGCluster](test/10test_tjGCluster.R)
+[tjGCluster](test/10test_tjGCluster.R) : Merging homology single cells by trajectory analysis
 
-[tjGCluster2](test/11test_tjGCluster2.R)
+[tjGCluster2](test/11test_tjGCluster2.R) : Merging homology single cells by trajectory analysis
 
 
 
