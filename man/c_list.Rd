@@ -1,6 +1,6 @@
 \name{c_list}
 \alias{c_list}
-\title{A graph-based k-partitioning Method}
+\title{A graph-based k-partitioning Method with scaling}
 \usage{
 c_list(dat, l, method,auto_scaling)
 }
