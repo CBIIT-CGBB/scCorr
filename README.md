@@ -151,13 +151,13 @@ The xy.coordinate is the regions for scaling. For example, xy.coordinate is 50, 
 
 [c_list](test/01test_c_list.R) : A graph-based k-partitioning method with scaling
 
-[d_list](test/02test_d_list.R) : Merging homology single cells by one coordinate with density method
+[d_list](test/02test_d_list.R) : Merging homological single cells by one coordinate with density method
 
 [GCluster](test/03test_GCluster.R) : Graphical based clustering
 
 [get_value](test/04test_get_value.R) : Converting single cell based matrix to cluster based matrix
 
-[m_list](test/05test_m_list.R) : Merging homology single cells by one coordinate by window sizes
+[m_list](test/05test_m_list.R) : Merging homological single cells by one coordinate by window sizes
 
 [merge_list](test/06test_merge_list.R) : Merging cluster into adjacent cluster if the merged cluster single
   cell number less than one cutoff
@@ -166,7 +166,7 @@ The xy.coordinate is the regions for scaling. For example, xy.coordinate is 50, 
 
 [scale_v](test/08test_scale_v.R) : Scaling function
 
-[tj_list](test/09test_tj_list.R) : Merging homology single cells by trajectory analysis
+[tj_list](test/09test_tj_list.R) : Merging homological single cells by trajectory analysis
 
 [tjGCluster](test/10test_tjGCluster.R) : Trajectory analysis function for [tj_list](test/09test_tj_list.R)
 
