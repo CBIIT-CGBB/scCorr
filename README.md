@@ -15,7 +15,7 @@ Data analysis workflow
 <img src="Image/workflow_diagram.png" width="600" height="200">  
 </p>
 
-The example R codes are: [tsne](examples/test01_do_tsne.R), [k-partitioning](examples/test02_do_GCluster.R), [merging clusters](examples/test03_merge_clusters.R), [cluster ID renaming](examples/test04_rename_clusterID.R), [correlation analysis](examples/test05_do_corr.R). More examples are at [the end](https://github.com/CBIIT-CGBB/scCorr/blob/master/README.md#14-examples-of-the-functions-of-the-package) of this page and the end of each section named as R codes.
+The example R codes are: [tsne](examples/test01_do_tsne.R), [k-partitioning](examples/test02_do_GCluster.R), [merging clusters](examples/test03_merge_clusters.R), [cluster ID renaming](examples/test04_rename_clusterID.R), [correlation analysis](examples/test05_do_corr.R). More examples are at [the end](https://github.com/CBIIT-CGBB/scCorr/blob/master/README.md#14-examples-of-the-functions-of-the-package) of this page and the end of each section named as **R codes**.
 
 ### 3. Data and the zero count distributions
 <p align="left">
