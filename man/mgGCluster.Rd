@@ -24,8 +24,7 @@ A list of merged result.
 }
 
 \description{
-  merge cluster into adjacent cluster if the merged cluster single 
-  cell number less than the cutoff.
+  merge clusters given the merged cluster IDs.
 }
 
 \examples{
