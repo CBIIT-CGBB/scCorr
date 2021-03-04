@@ -169,9 +169,9 @@ The xy.coordinate is the regions for scaling. For example, xy.coordinate is 50, 
 
 [tj_list](test/09test_tj_list.R) : Merging homology single cells by trajectory analysis
 
-[tjGCluster](test/10test_tjGCluster.R) : Merging homology single cells by trajectory analysis
+[tjGCluster](test/10test_tjGCluster.R) : Trajectory analysis function for [tj_list](test/09test_tj_list.R)
 
-[tjGCluster2](test/11test_tjGCluster2.R) : Merging homology single cells by trajectory analysis
+[tjGCluster2](test/11test_tjGCluster2.R) : Trajectory analysis function II for [tj_list](test/09test_tj_list.R)
 
 
 
