@@ -1,11 +1,11 @@
 \name{c_list}
 \alias{c_list}
-\title{Merging by Cluster Method}
+\title{A graph-based k-partitioning Method}
 \usage{
 c_list(dat, l, method,auto_scaling)
 }
 \arguments{
-\item{dat}{Data file for Clustering}
+\item{dat}{matrix or data frame}
 \item{l}{Number of clusters}
 \item{method}{Cluster method. Default: fast_greedy}
 }
