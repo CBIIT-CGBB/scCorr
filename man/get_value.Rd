@@ -1,6 +1,6 @@
 \name{get_value}
 \alias{get_value}
-\title{get_value}
+\title{get values merged single cells by clusters with average}
 \usage{
 get_value(dat = dat,d_list = d_list)
 }
@@ -9,9 +9,47 @@ get_value(dat = dat,d_list = d_list)
 \item{d_list}{lists of clusters of cells}
 }
 \value{
-A list of indices and name of cells.
+matrix: rows are genes and columns are clusters.
 }
 \description{
-This function returns the mean of value of genes based on d_list information.
+This function returns the mean of values of genes by clusters.
 }
 
+\examples{
+rm(list=ls());
+
+library(scCorr);
+
+## get data
+## 5 clusters of CD4 T cells
+ct.c   <- c(6:10); 
+## tsne result/output
+tsnef  <- "https://github.com/CBIIT-CGBB/scCorr/raw/master/data/01/do_tsne30_2000.txt";
+tsne   <- read.table(tsnef, header=T);
+
+## cluster matrix
+cluf   <- "https://github.com/CBIIT-CGBB/scCorr/raw/master/data/01/03clust_table.txt";
+clu    <- read.table(cluf, header=T, sep="\t");
+## check row.names
+sum(row.names(tsne)==row.names(clu))==nrow(clu);
+## sample index of CD4 T cells in the cluster matrix
+s.i    <- which(clu[,23] %in% ct.c);
+## some single cells of CD4 T cells 
+dat    <- tsne[s.i,];
+
+out           <- c_list(dat, 40);
+out.index     <- out[[1]];
+out.cellname  <- out[[2]];
+
+datf <- paste0(system.file("data",package="scCorr"), "/cd4_dat.Rdata")
+load(datf)
+cd4.i   <- which(colnames(cd4_dat) %in% row.names(dat));
+cd4_dat <- cd4_dat[,cd4.i];
+out1    <- get_value(cd4_dat, out.cellname);
+
+g_clut  <- GCluster(dat, k = 40);
+g_label <- g_clut$membership
+names(g_label) <- row.names(dat);
+out2    <- get_value(cd4_dat, g_label);
+  
+}
