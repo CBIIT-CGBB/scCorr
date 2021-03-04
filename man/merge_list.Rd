@@ -5,8 +5,8 @@
 merge_list(list,cutoff = 25)
 }
 \arguments{
-\item{l}{list}
-\item{ctf}{cutoff for the number of cells as a node}
+\item{l}{ an list of cell numbers by clusters}
+\item{ctf}{cutoff for the cell number}
 }
 \value{
 A list of indices of data and a list of names of data.
