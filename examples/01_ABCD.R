@@ -37,31 +37,31 @@ par("mar"=c(7, 7, 7, 7));
 cols <- rainbow(10, alpha=0.8);
 
 hist(z1, col=cols[7], border=cols[7], breaks=100, xlim=c(70, 100), 
-     font.main = 1,main="21430 full genes; 15973 single cells", xlab="",
-     ylab = '',cex.main=3,cex.lab=4, cex.axis = 2.5);
-title(ylab="Number of Genes", line=4, cex.lab=4, family = "sans")
-title(xlab="% of Zero Value", line=4.5, cex.lab=4, family = "sans")
+     font.main = 1,main="21,430 full genes; 15,973 single cells", xlab="",
+     ylab = '',cex.main=3,cex.lab=3.5, cex.axis = 2.5);
+title(ylab="Number of Genes", line=4, cex.lab=3.5, family = "sans")
+title(xlab="% of Zero Value", line=4.5, cex.lab=3.5, family = "sans")
 fig_label('A', pos='topleft',cex=5)
 
 hist(z3, col=cols[7], border=cols[7], breaks=100, xlim=c(70, 100), 
-     font.main = 1,main="15973 single cells; 21430 genes", xlab="",
-     ylab = '',cex.main=3,cex.lab=4, cex.axis= 2.5);
-title(ylab="Number of Cells", line=4, cex.lab=4, family = "sans")
-title(xlab="% of Zero Value", line=4.5, cex.lab=4, family = "sans")
+     font.main = 1,main="15,973 single cells; 21,430 genes", xlab="",
+     ylab = '',cex.main=3,cex.lab=3.5, cex.axis= 2.5);
+title(ylab="Number of Cells", line=4, cex.lab=3.5, family = "sans")
+title(xlab="% of Zero Value", line=4.5, cex.lab=3.5, family = "sans")
 fig_label('B', pos='topleft',cex=5)
 
 hist(z2, col=cols[7], border=cols[7], breaks=100, xlim=c(70, 100), 
-     font.main = 1,main="347 pathway genes with 15973 single cells", xlab="",ylab = '',
-     cex.main=3,cex.lab=4, cex.axis= 2.5);
-title(ylab="Number of Genes", line=4, cex.lab=4, family = "sans")
-title(xlab="% of Zero Value", line=4.5, cex.lab=4, family = "sans")
+     font.main = 1,main="347 pathway genes with 15,973 single cells", xlab="",ylab = '',
+     cex.main=3,cex.lab=3.5, cex.axis= 2.5);
+title(ylab="Number of Genes", line=4, cex.lab=3.5, family = "sans")
+title(xlab="% of Zero Value", line=4.5, cex.lab=3.5, family = "sans")
 fig_label('C', pos='topleft',cex=5)
 
 hist(z4, col=cols[7], border=cols[7], breaks=100, xlim=c(70, 100), 
-     font.main = 1,main="15973 single cells with 347 pathway genes", xlab="",ylab = '',
-     cex.main=3,cex.lab=4, cex.axis= 2.5);
-title(ylab="Number of Cells", line=4, cex.lab=4, family = "sans")
-title(xlab="% of Zero Value", line=4.5, cex.lab=4, family = "sans")
+     font.main = 1,main="15,973 single cells with 347 pathway genes", xlab="",ylab = '',
+     cex.main=3,cex.lab=3.5, cex.axis= 2.5);
+title(ylab="Number of Cells", line=4, cex.lab=3.5, family = "sans")
+title(xlab="% of Zero Value", line=4.5, cex.lab=3.5, family = "sans")
 fig_label('D', pos='topleft',cex=5)
 
 dev.off();
