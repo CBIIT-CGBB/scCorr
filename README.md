@@ -150,7 +150,7 @@ The xy.coordinate is the regions for scaling. For example, xy.coordinate is 50, 
 
 ### 14. Examples of the functions of the package
 
-[c_list](test/01test_c_list.R)
+[c_list](test/01test_c_list.R) : A graph-based k-partitioning Method with scaling
 
 [d_list](test/02test_d_list.R)
 
