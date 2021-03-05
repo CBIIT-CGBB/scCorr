@@ -4,7 +4,7 @@ Date: 2020-07-22
 Author: Heng Xu <xuheng@sas.upenn.edu> Xinyu Zhang <xinyu.zhang@yale.edu> Ying Hu <yhu@mail.nih.gov> 
 Maintainer: Heng Xu <xuheng@sas.upenn.edu>
 License: GPL-2
-Title: Correlation Computation
+Title: A graph-based k-partitioning approach for single-cell gene-gene correlation analysis
 Description: Merging homological single cells for the correlation analysis
 Depends: R (>= 3.5.0), igraph
 NeedsCompilation: no
