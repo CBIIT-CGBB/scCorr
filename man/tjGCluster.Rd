@@ -10,7 +10,7 @@
 }
 
 \usage{
-  tjGCluster(m, from=NULL, to=NULL);
+tjGCluster(m, from=NULL, to=NULL);
 }
 
 \arguments{
