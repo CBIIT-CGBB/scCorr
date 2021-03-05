@@ -2,15 +2,15 @@
 \alias{GCluster}
 
 \title{
- graphical based cluster
+ Graphical based cluster
 }
 
 \description{
- graphical based cluster
+ Graphical based cluster
 }
 
 \usage{
-  GCluster(dat=dat, wt=4, k=NULL, method="louvain");
+GCluster(dat=dat, wt=4, k=NULL, method="louvain");
 }
 
 \arguments{
