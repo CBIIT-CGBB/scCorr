@@ -10,7 +10,7 @@
 }
 
 \usage{
-  scale.v(x, start.v, end.v)
+scale.v(x, start.v, end.v)
 }
 
 \arguments{
