@@ -13,7 +13,7 @@ c_list(dat, l, method,auto_scaling)
 A list of indices of data and a list of names of data.
 }
 \description{
-This function uses the Network Modularity Optimazation Cluster Method to cluster the cells. It returns 
+This function uses the network modularity optimazation cluster methods to cluster or partite the cells. It returns 
 the list of indices and name of cells after clustering. 
 }
 
