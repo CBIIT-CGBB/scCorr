@@ -19,8 +19,6 @@ the list of indices and name of cells after clustering.
 \examples{
 rm(list=ls());
 
-rm(list=ls());
-
 library(scCorr);
 
 ## get data
