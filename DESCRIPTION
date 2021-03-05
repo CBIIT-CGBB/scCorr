@@ -5,7 +5,7 @@ Author: Heng Xu <xuheng@sas.upenn.edu> Xinyu Zhang <xinyu.zhang@yale.edu> Ying H
 Maintainer: Heng Xu <xuheng@sas.upenn.edu>
 License: GPL-2
 Title: Correlation Computation
-Description: merge single cells for the correlation analysis
+Description: Merging homological single cells for the correlation analysis
 Depends: R (>= 3.5.0), igraph
 NeedsCompilation: no
 
