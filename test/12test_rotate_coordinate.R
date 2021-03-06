@@ -1,8 +1,5 @@
 rm(list=ls());
 
-options(stringsAsFactors = F);
-source("rotate_coordinate.R");
-
 library(scCorr);
 
 ## get data
