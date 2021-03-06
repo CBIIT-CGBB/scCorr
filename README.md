@@ -171,3 +171,5 @@ The xy.coordinate is the regions for scaling. For example, xy.coordinate is 50, 
 [tjGCluster](test/10test_tjGCluster.R) : Trajectory analysis function for [tj_list](test/09test_tj_list.R)
 
 [tjGCluster2](test/11test_tjGCluster2.R) : Trajectory analysis function II for [tj_list](test/09test_tj_list.R)
+
+[r_c](test/12test_rotate_coordinate.R) : Rotating coordinate
