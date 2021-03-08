@@ -60,7 +60,7 @@ J: k=1,000). Average number of cells per cluster is shown (K).
 <img src="Image/1_L.png" width="310" height="300">
 </p>
 
-[R codes](examples/01_L.R) and one example (from clustering to tree plotting [R codes](test/13test_cluster_tree.R))  
+[R codes](examples/01_L.R) and one full example (from clustering to tree plotting [R codes](test/13test_cluster_tree.R))  
 
 ScCorr enables to trace evolutional process of each petitioned cluster (L).
 
