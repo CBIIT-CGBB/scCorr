@@ -1,4 +1,4 @@
-scCorr: R package for single cell association or correlation analysis
+scCorr: an R package for A graph-based k-partitioning approach for single-cell analysis
 =====================================================================
 
 ### 1. Installation
