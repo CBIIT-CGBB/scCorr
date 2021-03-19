@@ -7,7 +7,7 @@ scCorr: an R package for A graph-based k-partitioning approach for single-cell a
     install_github("CBIIT-CGBB/scCorr")
 
 ### 2. Motivation
-One of the challenges in single cell RNA-sequence analysis is abundance of zero values that results in biased estimation of gene-gene correlations for downstream analyses. Here, we present a novel graph-based k-partitioning method by merging “homology” cells to reduce the zero values. The method is robust and reliable for the detection of correlated gene pairs that is fundamental for network construction, gene-gene interaction, and cellular -omic analyses. The associated manuscript "scCorr: A graph-based k-partitioning approach for single-cell gene-gene correlation analysis" was at the [https://www.biorxiv.org/](https://www.biorxiv.org/content/10.1101/2021.03.04.433945v1).   
+One of the challenges in single cell RNA-sequence analysis is abundance of zero values that results in biased estimation of gene-gene correlations for downstream analyses. Here, we present a novel graph-based k-partitioning method by merging “homology” cells to reduce the zero values. The method is robust and reliable for the detection of correlated gene pairs that is fundamental for network construction, gene-gene interaction, and cellular -omic analyses. The associated manuscript **"scCorr: A graph-based k-partitioning approach for single-cell gene-gene correlation analysis"** was at the [https://www.biorxiv.org/](https://www.biorxiv.org/content/10.1101/2021.03.04.433945v1).   
 
 <h4 align="center">
 Data analysis workflow
