@@ -143,7 +143,7 @@ Correlation of top 10 co-expressed gene pairs from cluster 40 in different numbe
 
 <img src="Image/supp6_ABC.png" width="600" height="200">
 
-[R codes](examples/supp6_A.R)
+[R codes](examples/supp6_ABC.R)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 The xy.coordinate is the regions for scaling. For example, xy.coordinate is 50, the scaling region will be from -50 to 50, and so on.  We suggest that the xy.coordinates are 300 or 400 for about single cells from 5,000 to 15,000. The xy.coordinates could  be the increased if you have more single cells.
