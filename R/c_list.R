@@ -1,4 +1,4 @@
-c_list <- function(dat = dat,l = 30,method = 'fast_greedy',auto_scaling = TRUE){
+c_list <- function(dat = dat,l = 30,method = 'louvain',auto_scaling = TRUE){
   cell_name <- rownames(dat)
   out.s <- NULL
   num_clu = l
