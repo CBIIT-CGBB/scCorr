@@ -20,7 +20,7 @@ The example R codes are: [tsne](examples/test01_do_tsne.R), [k-partitioning](exa
 
 ### 3. Data and the zero count distributions
 <p align="left">
-<img src="Image/1_ABCD.png" width="440" height="320">  
+<img src="Image/1_ABCD.png" width="460" height="320">  
 </p>
 
 [R codes](examples/01_ABCD.R)
