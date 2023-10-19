@@ -11,5 +11,6 @@ export (merge_list)
 export (scale.v)
 export (mgGCluster)
 export (r_c)
+export (merge_cluster)
 
 importFrom("igraph", "graph_from_adjacency_matrix", "mst", "delete.edges", "components", "E", "cluster_louvain", "V")
