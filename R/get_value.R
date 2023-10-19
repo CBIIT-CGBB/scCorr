@@ -13,7 +13,7 @@ get_value <- function(dat = dat, d_list = d_list){
     for(i in 1:num_c){
       clu.u.i <- clu.u[i];
       c.j     <- which(d_list==clu.u.i);
-      res[,i] <- rowMeans(dat[, names(d_list)[c.j], drop=FALSE])
+      res[,i] <- apply(dat[, c.j], 1, function(x) mean(x, na.rm = T))
     }
   }
   row.names(res) <- row.names(dat)
