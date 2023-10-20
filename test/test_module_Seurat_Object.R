@@ -92,11 +92,8 @@ write.table(out.d, "20231019_single_cell.txt", quote=F, sep="\t")
 
 var.v <- apply(out.d, 1, var)
 ## the genes without expression
-var.i <- which(var.v==0)
-for (i in var.i){
-  ## the small random values will be added on the 0 values 
-  out.d[i,] <- out.d[i,] + runif(ncol(out.d))/1000;
-}
+## remove no-informative 
+out.d <- out.d[-var.i,]
 
 out.f <- m2p(t(out.d))
 ## matrix for p value 
