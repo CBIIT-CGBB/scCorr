@@ -92,7 +92,8 @@ write.table(out.d, "20231019_single_cell.txt", quote=F, sep="\t")
 
 var.v <- apply(out.d, 1, var)
 ## the genes without expression
-## remove no-informative 
+var.i <- which(var.v==0)
+## remove the no-informative 
 out.d <- out.d[-var.i,]
 
 out.f <- m2p(t(out.d))
