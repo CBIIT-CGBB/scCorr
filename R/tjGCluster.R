@@ -28,6 +28,10 @@ tjGCluster <- function(m, from=NULL, to=NULL){
     out.n  <- out2$vpath[[1]]$name;
     return(list(node=out.n, mst.g=mst.g))
   }
+  if (length(out2$vpath[[1]]$name)==1){
+    out.n  <- out2$vpath[[1]]$name;
+    return(list(node=out.n, mst.g=mst.g))
+  }
   v1     <- out2$vpath[[1]]$name[1];
   out.p  <- NULL;
   out.n  <- out2$vpath[[1]]$name;
