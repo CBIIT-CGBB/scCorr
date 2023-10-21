@@ -157,8 +157,8 @@ GCluster <- function(dat=dat, wt=4, k=NULL, method="louvain"){
   out.s <- NULL;
   for (i in 1:clu.n){
     s.i <- which(clu.i == i);
-    x.m <- mean(dat.s[s.i, 1]);
-    y.m <- mean(dat.s[s.i, 2]);
+    x.m <- mean(as.numeric(dat.s[s.i, 1]), na.rm = TRUE);
+    y.m <- mean(as.numeric(dat.s[s.i, 2]), na.rm = TRUE);
     out.s <- rbind(out.s, c(x.m, y.m));
   }
 
