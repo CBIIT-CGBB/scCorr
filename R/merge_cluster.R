@@ -39,8 +39,10 @@ merge_cluster <- function(dat, cutoff=5){
   out.f   <- out[out.i,];
   ## remove small clusters in column 2
   out.j   <- which(out.f[,2] %in% small.c);
-  out.f   <- out.f[-out.j,];
-
+  if (length(out.j) > 0{
+     out.f   <- out.f[-out.j,];
+  }
+  
   ##
   ## column 1 clusters will be merged into column 2
   m.out   <- NULL;
